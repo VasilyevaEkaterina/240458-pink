@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Екатерина Васильева](https://up.htmlacademy.ru/adaptive/11/user/240458).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Мусаэльян](https://up.htmlacademy.ru/adaptive/11/user/124940).
 
 ---
 
