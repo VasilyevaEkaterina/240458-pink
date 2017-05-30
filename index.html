@@ -3,10 +3,134 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="page-header__logo">
+          <a href="" class="page-header__link"><img class="page-header__picture" src="#" alt="logo" width="50" height="25"></a>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
+            <li class="main-nav__item"><a href="/photo.html" class="main-nav__link">Фотографии</a></li>
+            <li class="main-nav__item"><a href="/form.html" class="main-nav__link">Конкурс</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">html academy</a></li>
+          </ul>
+        </nav>
+        <button class="page-header__toggle" type="button">Открыть меню</button>
+      </header>
+      <main class="main">
+        <div class="intro intro--index">
+          <h2 class="intro__title">Взгляните на жизнь иначе!</h2>
+          <div class="intro__photo"></div>
+          <a href="#" class="intro__btn">Скачать приложение</a>
+          <div class="intro__stores">
+            <div class="intro__store intro__store--apple"></div>
+            <div class="intro__store intro__store--android"></div>
+            <div class="intro__store intro__store--windows"></div>
+            <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </div>
+        <div class="promo">
+          <h1 class="promo__title">Устали от серости мегаполиса? Нам есть, что вам предложить!</h1>
+          <div class="advantages">
+            <div class="advantages__item">
+              <div class="advantages__photo"></div>
+              <h2 class="advantages__title">Поднимает настроение</h2>
+              <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__photo"></div>
+              <h2 class="advantages__title">Меняет мир вокруг</h2>
+              <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__photo"></div>
+              <h2 class="advantages__title">Заводит новых друзей</h2>
+              <p class="advantages__text">Ставьте лайки,комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
+          </div>
+          <div class="research">
+            <div class="research__photo"></div>
+            <h2 class="research__title">Эффект на 24 часа!</h2>
+            <p class="research__text">Британские ученые провели исследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="research__link">Узнать больше об исследовании</a>
+          </div>
+        </div>
+        <div class="reviews">
+          <div class="review">
+            <h3 class="review__name">Николай Петров</h3>
+            <span class="review__details">25 лет, водитель трамвая</span>
+            <p class="review__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+          </div>
+          <div class="reviews__toggles"></div>
+        </div>
+        <div class="prices">
+          <div class="prices__header">
+            <ul class="prices__row prices__row--header">
+              <li class="prices__column prices__column--base">
+                База 1,99 USD
+              </li>
+              <li class="prices__column prices__column--standart">
+                Стандарт 3,99 USD
+                <span class="prices__label">хит</span>
+              </li>
+              <li class="prices__column prices__column--unlimited">
+                Анлим 9,99 USD
+              </li>
+            </ul>
+          </div>
+          <div class="prices__content">
+            <ul class="prices__row prices__row--filter">
+              <li class="prices__column prices__column--title">Розовый фильтр</li>
+              <li class="prices__column prices__column--base"></li>
+              <li class="prices__column prices__column--standart"></li>
+              <li class="prices__column prices__column--unlimited"></li>
+            </ul>
+            <ul class="prices__row prices__row--smile">
+              <li class="prices__column prices__column--title">Смайлики</li>
+              <li class="prices__column prices__column--base"></li>
+              <li class="prices__column prices__column--standart"></li>
+              <li class="prices__column prices__column--unlimited"></li>
+            </ul>
+            <ul class="prices__row prices__row--comments">
+              <li class="prices__column prices__column--title">Комментарии</li>
+              <li class="prices__column prices__column--base"></li>
+              <li class="prices__column prices__column--standart"></li>
+              <li class="prices__column prices__column--unlimited"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contacts">
+          <div class="contacts__title">
+            Остались вопросы?Свяжитесь с нами!
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__text">Звоните:</div>
+            <div class="contacts__contact">+7(812)555-66-66</div>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__text">Приезжайте в гости:</div>
+            <div class="contacts__contact">ул. Большая Конюшенная, 19/8</div>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__text">Пишите:</div>
+            <div class="contacts__contact">mail@htmlacademy.ru</div>
+          </div>
+          <div class="map"></div>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__logo"></div>
+        <div class="social-btns">
+          <div class="social-btns__btn social-btns__btn--tw"><a href="#" class="social-btns__link">tw</a></div>
+          <div class="social-btns__btn social-btns__btn--fb"><a href="#" class="social-btns__link">fb</a></div>
+          <div class="social-btns__btn social-btns__btn--youtube"><a href="#" class="social-btns__link">youtube</a></div>
+        </div>
+        <div class="copyright"><a href="#" class="copyright__link"><img class="copyright__image"></a></div>
+      </footer>
+    </div>
   </body>
 </html>
