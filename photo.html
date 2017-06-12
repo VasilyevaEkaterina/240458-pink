@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="page-header">
-        <div class="page-header__logo">
-          <a href="" class="page-header__link"><img class="page-header__picture" src="#" alt="logo" width="50" height="25"></a>
-        </div>
+    <header class="page-header">
+      <div class="page-header__inner">
+        <a href="" class="page-header__link"><img class="page-header__picture" src="#" alt="logo" width="50" height="25"></a>
         <nav class="main-nav">
           <ul class="main-nav__items">
             <li class="main-nav__item"><a href="/index.html" class="main-nav__link">Главная</a></li>
@@ -20,12 +18,14 @@
           </ul>
         </nav>
         <button class="page-header__toggle" type="button">Открыть меню</button>
-      </header>
-      <main class="main">
         <div class="intro">
-          <h2 class="intro__title">Фотографии пользователей</h2>
+          <h1 class="intro__title">Фотографии пользователей</h1>
         </div>
-        <div class="photos">
+      </div>
+    </header>
+    <main class="main">
+      <div class="photos">
+        <div class="photos__inner">
           <p class="photos__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
           <div class="photo photo--main">
             <a href="#" class="photo__link"><img src="#" alt="фото-1"></a>
@@ -71,45 +71,50 @@
           </div>
           <p class="photos__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
         </div>
-        <div class="photo-editor">
+      </div>
+      <div class="photo-editor">
+        <div class="photo-editor__inner">
           <div class="photo-editor__photo"><img src="#" class="photo-editor__image"></div>
-          <div class="photo-editor__tools">
+          <form class="photo-editor__tools" action="https://echo.htmlacademy.ru" method="post">
             <div class="photo-editor__crop">
               <div class="photo-editor__scale photo-editor__scale--crop">
                 <div class="photo-editor__bar photo-editor__bar--crop">
-                  <div class="photo-editor__toggle photo-editor__toggle--crop"></div>
+                  <button class="photo-editor__toggle photo-editor__toggle--crop" type="button" name="button"></button>
                 </div>
               </div>
             </div>
             <div class="photo-editor__fill">
               <div class="photo-editor__scale photo-editor__scale--fill">
                 <div class="photo-editor__bar photo-editor__bar--fill">
-                  <div class="photo-editor__toggle photo-editor__toggle--fill"></div>
+                  <button class="photo-editor__toggle photo-editor__toggle--fill type="button" name="button""></button>
                 </div>
               </div>
             </div>
             <div class="photo-editor__contrast">
               <div class="photo-editor__scale photo-editor__scale--contrast">
                 <div class="photo-editor__bar photo-editor__bar--contrast">
-                  <div class="photo-editor__toggle photo-editor__toggle--contrast"></div>
+                  <button class="photo-editor__toggle photo-editor__toggle--contrast type="button" name="button""></button>
                 </div>
               </div>
             </div>
-          <div class="photo-editor__btns">
-            <button class="photo-editor__post" type="button" name="button"></button>
-            <button class="photo-editor__cancel" type="button" name="button"></button>
-          </div>
+            <div class="photo-editor__btns">
+              <input class="photo-editor__post" type="submit" name="button"></input>
+              <input class="photo-editor__cancel" type="reset" name="button"></input>
+            </div>
+          </form>
         </div>
-      </main>
-      <footer class="page-footer">
-        <div class="page-footer__logo"></div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <img class="page-footer__logo"></img>
         <div class="social-btns">
-          <div class="social-btns__btn social-btns__btn--tw"><a href="#" class="social-btns__link">tw</a></div>
-          <div class="social-btns__btn social-btns__btn--fb"><a href="#" class="social-btns__link">fb</a></div>
-          <div class="social-btns__btn social-btns__btn--youtube"><a href="#" class="social-btns__link">youtube</a></div>
+          <a href="#" class="social-btns__link social-btns__link--tw">tw</a>
+          <a href="#" class="social-btns__link social-btns__link--fb">fb</a>
+          <a href="#" class="social-btns__link social-btns__link--youtube">youtube</a>
         </div>
-        <div class="copyright"><a href="#" class="copyright__link"><img class="copyright__image"></a></div>
-      </footer>
-    </div>
+        <a href="#" class="copyright"><img class="copyright__image"></a>
+      </div>
+    </footer>
   </body>
 </html>

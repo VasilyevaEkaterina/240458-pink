@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="page-header">
-        <div class="page-header__logo">
-          <a href="" class="page-header__link"><img class="page-header__picture" src="#" alt="logo" width="50" height="25"></a>
-        </div>
+    <header class="page-header">
+      <div class="page-header__inner">
+        <a href="#" class="page-header__link"><img class="page-header__logo" src="#" alt="logo" width="50" height="25"></a>
         <nav class="main-nav">
           <ul class="main-nav__items">
             <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
@@ -20,54 +18,66 @@
           </ul>
         </nav>
         <button class="page-header__toggle" type="button">Открыть меню</button>
-      </header>
-      <main class="main">
         <div class="intro intro--index">
-          <h2 class="intro__title">Взгляните на жизнь иначе!</h2>
+          <div class="intro__title">Взгляните на жизнь иначе!</div>
           <div class="intro__photo"></div>
           <a href="#" class="intro__btn">Скачать приложение</a>
           <div class="intro__stores">
-            <div class="intro__store intro__store--apple"></div>
-            <div class="intro__store intro__store--android"></div>
-            <div class="intro__store intro__store--windows"></div>
+            <a class="intro__store intro__store--apple"></a>
+            <a class="intro__store intro__store--android"></a>
+            <a class="intro__store intro__store--windows"></a>
             <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
         </div>
-        <div class="promo">
-          <h1 class="promo__title">Устали от серости мегаполиса? Нам есть, что вам предложить!</h1>
-          <div class="advantages">
-            <div class="advantages__item">
-              <div class="advantages__photo"></div>
-              <h2 class="advantages__title">Поднимает настроение</h2>
-              <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </div>
-            <div class="advantages__item">
-              <div class="advantages__photo"></div>
-              <h2 class="advantages__title">Меняет мир вокруг</h2>
-              <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </div>
-            <div class="advantages__item">
-              <div class="advantages__photo"></div>
-              <h2 class="advantages__title">Заводит новых друзей</h2>
-              <p class="advantages__text">Ставьте лайки,комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="promo">
+        <div class="promo__inner">
+          <div class="promo__title">Устали от серости мегаполиса? Нам есть, что вам предложить!</div>
+        </div>
+      </div>
+      <div class="advantages">
+        <div class="advantages__inner">
+          <div class="advantages__item">
+            <div class="advantages__photo advantages__photo--left"></div>
+            <h2 class="advantages__title">Поднимает настроение</h2>
+            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </div>
-          <div class="research">
-            <div class="research__photo"></div>
-            <h2 class="research__title">Эффект на 24 часа!</h2>
-            <p class="research__text">Британские ученые провели исследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a class="research__link">Узнать больше об исследовании</a>
+          <div class="advantages__item">
+            <div class="advantages__photo advantages__photo--center"></div>
+            <h2 class="advantages__title">Меняет мир вокруг</h2>
+            <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__photo advantages__photo--right"></div>
+            <h2 class="advantages__title">Заводит новых друзей</h2>
+            <p class="advantages__text">Ставьте лайки,комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </div>
         </div>
-        <div class="reviews">
-          <div class="review">
-            <h3 class="review__name">Николай Петров</h3>
-            <span class="review__details">25 лет, водитель трамвая</span>
-            <p class="review__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
-          </div>
-          <div class="reviews__toggles"></div>
+      </div>
+      <div class="research">
+        <div class="research__inner">
+          <h2 class="research__title">Эффект на 24 часа!</h2>
+          <p class="research__text">Британские ученые провели исследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="research__link">Узнать больше об исследовании</a>
         </div>
-        <div class="prices">
+      </div>
+      <div class="review">
+        <div class="review__inner">
+          <div class="review__list">
+            <div class="review__item">
+              <h3 class="review__name">Николай Петров</h3>
+              <span class="review__details">25 лет, водитель трамвая</span>
+              <p class="review__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+            </div>
+          </div>
+          <a href="#" class="review__btn review__btn--prev"></a>
+          <a href="#" class="review__btn review__btn--next"></a>
+        </div>
+      </div>
+      <div class="prices">
+        <div class="prices__inner">
           <div class="prices__header">
             <ul class="prices__row prices__row--header">
               <li class="prices__column prices__column--base">
@@ -103,13 +113,15 @@
             </ul>
           </div>
         </div>
-        <div class="contacts">
+      </div>
+      <div class="contacts">
+        <div class="contacts__inner">
           <div class="contacts__title">
             Остались вопросы?Свяжитесь с нами!
           </div>
           <div class="contacts__item">
             <div class="contacts__text">Звоните:</div>
-            <div class="contacts__contact">+7(812)555-66-66</div>
+            <a class="contacts__tel" href="+7(812)555-66-66"></a>
           </div>
           <div class="contacts__item">
             <div class="contacts__text">Приезжайте в гости:</div>
@@ -117,20 +129,22 @@
           </div>
           <div class="contacts__item">
             <div class="contacts__text">Пишите:</div>
-            <div class="contacts__contact">mail@htmlacademy.ru</div>
+            <a class="contacts__email" href="mail@htmlacademy.ru"></a>
           </div>
-          <div class="map"></div>
+          <div class="contacts__map"></div>
         </div>
-      </main>
-      <footer class="page-footer">
-        <div class="page-footer__logo"></div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <img class="page-footer__logo"></img>
         <div class="social-btns">
-          <div class="social-btns__btn social-btns__btn--tw"><a href="#" class="social-btns__link">tw</a></div>
-          <div class="social-btns__btn social-btns__btn--fb"><a href="#" class="social-btns__link">fb</a></div>
-          <div class="social-btns__btn social-btns__btn--youtube"><a href="#" class="social-btns__link">youtube</a></div>
+          <a href="#" class="social-btns__link social-btns__link--tw">tw</a>
+          <a href="#" class="social-btns__link social-btns__link--fb">fb</a>
+          <a href="#" class="social-btns__link social-btns__link--youtube">youtube</a>
         </div>
-        <div class="copyright"><a href="#" class="copyright__link"><img class="copyright__image"></a></div>
-      </footer>
-    </div>
+        <a href="#" class="copyright"><img class="copyright__image"></a>
+      </div>
+    </footer>
   </body>
 </html>
