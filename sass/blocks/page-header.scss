@@ -1,9 +1,42 @@
 .page-header {
   background-color: $bg;
-  @media (min-width: $tablet-widths) {
-
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (min-width: $desktop-widths) {
+    background-image: url("/img/bg-back-desktop@1x.jpg");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-back-desktop@2x.jpg");
+    }
   }
 }
 .page-header__inner {
-  @include container ;
+  @include container;
+  position: relative;
+}
+.page-header__toggle {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  font-size: 0;
+  z-index: 3;
+  right: 20px;
+  top: 25px;
+  border: none;
+  background: none;
+  outline: none;
+  background-image: url("/img/icon-menu-cross.svg");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  &--closed {
+    background-image: url("/img/icon-menu-burger.svg");
+  }
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
 }

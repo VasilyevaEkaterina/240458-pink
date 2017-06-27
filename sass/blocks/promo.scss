@@ -1,3 +1,34 @@
+.promo {
+  background-color: #ffffff;
+  position: relative;
+}
+.promo::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-triangle-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+    height: 100%;
+  }
+}
 .promo__inner {
   @include container;
+}
+.promo__title {
+  @include title;
+  font-weight: 300;
+  padding: 0 20px;
+  padding-top: 30px;
+  text-align: center;
+}
+.promo__title-wrap {
+  display: block;
+  padding-top: 20px;
+  @media (min-width: $tablet-widths) {
+    display: inline;
+  }
 }

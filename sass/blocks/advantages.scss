@@ -1,3 +1,26 @@
+.advantages {
+  background-color: $bg-grey;
+}
 .advantages__inner {
-  @include container ;
+  @include container;
+  padding-top: 120px;
+  padding-bottom: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.advantages__inner::after {
+  position: absolute;
+  content: "";
+  width: 157px;
+  height: 320px;
+  background-size: 157px 320px;
+  background-repeat: no-repeat;
+  background-image: url("/img/iphone-screen-mobile@1x.png");
+  bottom: -40px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.advantages__item {
+  padding: 10px 20px;
+  text-align: center;
 }

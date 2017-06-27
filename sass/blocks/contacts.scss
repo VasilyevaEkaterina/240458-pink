@@ -1,3 +1,39 @@
+.contacts {
+  @include title;
+  font-weight: 300;
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+}
+.contacts::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-triangle-white-footer.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50px;
+  @media (min-width: $tablet-widths) {
+
+  }
+}
 .contacts__inner {
-  @include container ;
+  @include container;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contacts__text {
+  font-weight: 700;
+  font-size: 20px;
+}
+.contacts__item {
+  padding-top: 30px;
+}
+.contacts__tel,
+.contacts__email,
+.contacts__address {
+  text-decoration: none;
+  color: $pink;
 }
