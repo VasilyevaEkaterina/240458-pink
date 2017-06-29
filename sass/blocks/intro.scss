@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    align-items: flex-start;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("/img/bg-back-tablet@2x.jpg");
     }
@@ -13,6 +14,7 @@
   @media (min-width: $desktop-widths) {
     background-image: none;
     position: relative;
+    justify-content: space-between;
   }
 }
 .intro::after {
@@ -32,7 +34,7 @@
   }
 }
 .intro__photo {
-  padding-top: 230px;
+  padding-top: 200px;
   padding-bottom: 270px;
   margin-top: 1px;
   position: relative;
@@ -46,12 +48,13 @@
     }
   }
   @media (min-width: $tablet-widths) {
-   background-image: none;
-   width: 50%;
+    padding-top: 350px;
+    background-image: none;
+    width: 50%;
   }
   @media (min-width: $desktop-widths) {
     margin-top: 0;
-    padding-top: 375px;
+    padding-top: 450px;
     display: flex;
   }
 }
@@ -77,7 +80,7 @@
     background-size: 700px 545px;
     width: 700px;
     height: 545px;
-    left: 0;
+    left: -287px;
     transform: translateX(-50%);
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("/img/iphone-hand-tablet@2x.png");
@@ -90,16 +93,26 @@
 .intro__title {
   display: none;
   @media (min-width: $tablet-widths) {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 150px;
+    display: block;
     @include title;
     color: #ffffff;
     font-weight: 300;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
   }
   @media (min-width: $desktop-widths) {
-
+  }
+}
+.intro__download-wrapper {
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    width: 50%;
+    flex-direction: column-reverse;
+    order: -1;
+    z-index: 2000;
+    padding-top: 120px;
+    padding-right: 300px;
   }
 }
 .intro__download {
@@ -107,7 +120,6 @@
   padding-right: 20px;
   @media (min-width: $tablet-widths) {
     order: -1;
-    width: 50%;
   }
 }
 .intro__stores {
@@ -122,7 +134,14 @@
 .intro__store:last-child {
   padding-right: 0;
 }
-
+.intro__store--android {
+  @media (min-width: $tablet-widths) {
+    opacity: 0.5;
+  }
+  @media (min-width: $desktop-widths) {
+    opacity: 1;
+  }
+}
 .intro__btn {
   text-decoration: none;
   color: #ffffff;

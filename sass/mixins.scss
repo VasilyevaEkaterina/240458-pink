@@ -1,6 +1,6 @@
 @mixin container {
   width: 320px;
-  border: 1px solid red;
+  border: 1px dashed $pink;
   margin: 0 auto;
   @media (min-width: $tablet-widths) {
     width: 660px;

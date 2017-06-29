@@ -5,22 +5,84 @@
   @include container;
   padding-top: 120px;
   padding-bottom: 300px;
-  position: relative;
   overflow: hidden;
+  @media (min-width: $tablet-widths) {
+    padding-top: 150px;
+    padding-bottom: 20px;
+  }
 }
-.advantages__inner::after {
+.advantages__item {
+  padding: 10px 20px;
+  text-align: center;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+}
+.advantages__description {
+  @media (min-width: $tablet-widths) {
+    width: 30%;
+  }
+}
+.advantages__photo {
+  @media (min-width: $tablet-widths) {
+    width: 70%;
+  }
+}
+.advantages__photo--left {
+  position: relative;
+}
+.advantages__photo--left::after {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 268px;
+    height: 481px;
+    background-size: 268px 481px;
+    background-repeat: no-repeat;
+    background-image: url("/img/iphone-screen-1-tablet@1x.png");
+    left: 0%;
+  }
+}
+.advantages__photo--center {
+  position: relative;
+}
+.advantages__photo--center::after {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 268px;
+    height: 481px;
+    background-size: 268px 481px;
+    background-repeat: no-repeat;
+    background-image: url("/img/iphone-screen-2-tablet@1x.png");
+    left: 0%;
+  }
+}
+.advantages__photo--right {
+  position: relative;
+}
+.advantages__photo--right::after {
   position: absolute;
   content: "";
   width: 157px;
   height: 320px;
   background-size: 157px 320px;
   background-repeat: no-repeat;
-  background-image: url("/img/iphone-screen-mobile@1x.png");
-  bottom: -40px;
-  transform: translateX(-50%);
-  left: 50%;
-}
-.advantages__item {
-  padding: 10px 20px;
-  text-align: center;
+  @media (max-width: $mobile-widths) {
+    background-image: url("/img/iphone-screen-mobile@1x.png");
+    top: 200px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/iphone-screen-3-tablet@1x.png");
+    width: 268px;
+    height: 481px;
+    background-size: 268px 481px;
+    bottom: -20px;
+    left:  0;
+  }
 }

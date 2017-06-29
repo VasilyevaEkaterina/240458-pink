@@ -1,9 +1,33 @@
 .page-footer {
-  display: none;
-  @media (min-width: $tablet-widths) {
-    display: block;
-  }
+
 }
 .page-footer__inner {
-  @include container ;
+  display: none;
+  @media (min-width: $tablet-widths) {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.page-footer__logo {
+  position: relative;
+  align-self: flex-start;
+  width: 147px;
+  padding-left: 20px;
+}
+.page-footer__logo::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/logo-pink-blue-mobile.svg");
+    width: 147px;
+    height: 41px;
+    background-size: 147px 41px;
+  }
+  @media (min-width: $desktop-widths) {
+    background-image: url("/img/logo-pink-blue-desktop.svg");
+  }
 }
