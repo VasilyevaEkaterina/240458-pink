@@ -2,8 +2,13 @@
   text-decoration: none;
   color: $bg;
   position: relative;
-  padding-right: 50px;
-  align-self: flex-end;
+  display: block;
+  text-align: center;
+  @media (min-width: $tablet-widths) {
+    padding-right: 50px;
+    display: flex;
+    align-self: flex-end;
+  }
 }
 .copyright::after {
   position: absolute;
@@ -14,5 +19,7 @@
   width: 35px;
   height: 35px;
   top: -2px;
-  right: 5px;
+  @media (min-width: $tablet-widths) {
+    right: 5px;
+  }
 }

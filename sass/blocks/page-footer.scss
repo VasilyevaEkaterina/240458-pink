@@ -2,31 +2,42 @@
 
 }
 .page-footer__inner {
-  display: none;
+  @include container;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
   @media (min-width: $tablet-widths) {
-    @include container;
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  }
+}
+.page-footer__inner--index {
+  @media (max-width: $mobile-widths) {
+    display: none;
   }
 }
 .page-footer__logo {
+  display: flex;
+  flex-basis: 100%;
   position: relative;
-  align-self: flex-start;
-  width: 147px;
-  padding-left: 20px;
+  padding-bottom: 70px;
+  justify-content: center;
+  @media (min-width: $tablet-widths) {
+    align-self: flex-start;
+    width: 147px;
+    padding: 0;
+    flex-basis: auto;
+    padding-left: 20px;
+  }
 }
 .page-footer__logo::after {
   position: absolute;
   content: "";
   background-repeat: no-repeat;
-  @media (min-width: $tablet-widths) {
-    background-image: url("/img/logo-pink-blue-mobile.svg");
-    width: 147px;
-    height: 41px;
-    background-size: 147px 41px;
-  }
+  background-image: url("/img/logo-pink-blue-mobile.svg");
+  width: 147px;
+  height: 41px;
+  background-size: 147px 41px;
   @media (min-width: $desktop-widths) {
     background-image: url("/img/logo-pink-blue-desktop.svg");
   }
