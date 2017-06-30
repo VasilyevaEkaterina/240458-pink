@@ -171,7 +171,7 @@ body {
   transform: translateX(-50%);
   z-index: 1000; }
 
-.intro__title {
+.intro__title--index {
   display: none; }
 
 .intro__download {
@@ -239,7 +239,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-  font-weight: 700; }
+  font-weight: 700;
+  cursor: pointer; }
 
 .main-nav__logo {
   padding: 10px 20px;
@@ -370,8 +371,7 @@ body {
 .review__slider {
   position: relative;
   display: inline-block;
-  text-align: center;
-  cursor: pointer; }
+  text-align: center; }
 
 .review__slide {
   text-align: center;
@@ -487,18 +487,20 @@ body {
     padding-bottom: 20px; }
 
   .advantages__item {
+    padding: 0;
     display: -ms-flexbox;
     display: flex;
     text-align: left;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-bottom: 0; }
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
 
   .advantages__description {
-    width: 30%; }
+    width: 50%;
+    padding-right: 20px; }
 
   .advantages__photo {
-    width: 70%; }
+    width: 50%;
+    padding-left: 20px; }
 
   .advantages__photo--right::after {
     background-image: url("/img/iphone-screen-3-tablet@1x.png");
@@ -506,7 +508,7 @@ body {
     height: 481px;
     background-size: 268px 481px;
     bottom: -20px;
-    left: 0; }
+    left: 30px; }
 
   .contacts__inner {
     width: 660px; }
@@ -560,7 +562,7 @@ body {
     left: -287px;
     transform: translateX(-50%); }
 
-  .intro__title {
+  .intro__title--index {
     display: block;
     font-size: 30px;
     line-height: 35px;
@@ -646,8 +648,36 @@ body {
     width: 660px; }
 
   .review::after {
+    width: 100%; }
+
+  .review__slide {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 80px;
+    padding-right: 80px; }
+
+  .review__details {
+    display: block;
     width: 100%;
-    height: 100%; }
+    -ms-flex-order: 3;
+    order: 3;
+    padding-bottom: 25px; }
+
+  .review__text {
+    -ms-flex-order: 1;
+    order: 1; }
+
+  .review__name {
+    display: block;
+    width: 100%;
+    -ms-flex-order: 2;
+    order: 2;
+    margin: 0; }
+
+  .review__text::before {
+    left: 25px; }
 
   .social-btns {
     display: -ms-flexbox;
@@ -689,6 +719,26 @@ body {
   .advantages__inner {
     width: 960px; }
 
+  .advantages__inner {
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 70px; }
+
+  .advantages__item {
+    width: 33.333333%;
+    text-align: center; }
+
+  .advantages__description {
+    width: auto;
+    padding: 0;
+    padding-top: 500px;
+    padding-left: 59px;
+    padding-right: 59px; }
+
+  .advantages__photo {
+    width: auto;
+    padding: 0; }
+
   .advantages__photo--left::after {
     position: absolute;
     content: "";
@@ -697,7 +747,20 @@ body {
     background-size: 268px 481px;
     background-repeat: no-repeat;
     background-image: url("/img/iphone-screen-1-tablet@1x.png");
-    left: 0%; }
+    top: 0;
+    left: 30px;
+    box-shadow: inset 0 -5px 5px -7px rgba(0, 0, 0, 0.8); }
+
+  .advantages__photo--left::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 8px;
+    background-color: #E2E2E2;
+    top: 479px;
+    left: 13px;
+    z-index: 4000;
+    box-shadow: 0 -4px 5px -3px rgba(0, 0, 0, 0.5); }
 
   .advantages__photo--center::after {
     position: absolute;
@@ -707,7 +770,33 @@ body {
     background-size: 268px 481px;
     background-repeat: no-repeat;
     background-image: url("/img/iphone-screen-2-tablet@1x.png");
-    left: 0%; }
+    top: 0;
+    left: 30px; }
+
+  .advantages__photo--center::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 8px;
+    background-color: #E2E2E2;
+    top: 479px;
+    left: 13px;
+    z-index: 4000;
+    box-shadow: 0 -4px 5px -3px rgba(0, 0, 0, 0.5); }
+
+  .advantages__photo--right::after {
+    top: 0; }
+
+  .advantages__photo--right::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 8px;
+    background-color: #E2E2E2;
+    top: 479px;
+    left: 13px;
+    z-index: 4000;
+    box-shadow: 0 -4px 5px -3px rgba(0, 0, 0, 0.5); }
 
   .contacts__inner {
     width: 960px; }
@@ -737,11 +826,13 @@ body {
 
   .intro {
     background-image: none;
-    position: relative;
     -ms-flex-pack: justify;
     justify-content: space-between; }
 
-  .intro::after {
+  .intro--index {
+    position: relative; }
+
+  .intro--index::after {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
@@ -817,14 +908,58 @@ body {
     width: 960px; }
 
   .review__inner {
-    width: 960px; } }
+    width: 960px; }
+
+  .review__slide {
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 100px;
+    position: relative; }
+
+  .review__slide::before {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-review-arrow-left.svg");
+    background-size: 22px 42px;
+    width: 22px;
+    height: 42px;
+    background-repeat: no-repeat;
+    left: 90px;
+    transform: translateY(-50%);
+    top: 50%; }
+
+  .review__slide::after {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-review-arrow-right.svg");
+    background-size: 22px 42px;
+    width: 22px;
+    height: 42px;
+    background-repeat: no-repeat;
+    right: 90px;
+    transform: translateY(-50%);
+    top: 50%; }
+
+  .review__text::before {
+    content: "";
+    background-image: url("/img/icon-quotes.svg");
+    background-size: 79px 64px;
+    background-repeat: no-repeat;
+    width: 79px;
+    height: 64px;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+  .review__text::after {
+    content: ""; } }
 
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx) {
 
   .contacts__map {
     background-image: url("/img/bg-map-desktop@2x.jpg"); }
 
-  .intro::after {
+  .intro--index::after {
     background-image: url("/img/iphone-hand-desktop@2x.png"); }
 
   .page-header {

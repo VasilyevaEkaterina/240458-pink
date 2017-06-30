@@ -13,11 +13,15 @@
   }
   @media (min-width: $desktop-widths) {
     background-image: none;
-    position: relative;
     justify-content: space-between;
   }
 }
-.intro::after {
+.intro--index {
+  @media (min-width: $desktop-widths) {
+    position: relative;
+  }
+}
+.intro--index::after {
   @media (min-width: $desktop-widths) {
     content: "";
     position: absolute;
@@ -90,7 +94,7 @@
     background-image: none;
   }
 }
-.intro__title {
+.intro__title--index {
   display: none;
   @media (min-width: $tablet-widths) {
     display: block;

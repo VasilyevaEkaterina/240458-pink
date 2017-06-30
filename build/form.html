@@ -9,9 +9,18 @@
   <body>
     <header class="page-header">
       <div class="page-header__inner">
-        <a href="" class="page-header__link"><img class="page-header__picture" src="#" alt="logo" width="50" height="25"></a>
+        <button class="page-header__toggle" type="button">Открыть меню</button>
         <nav class="main-nav">
           <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="/img/logo-pink-white-tablet.svg">
+                  <img class="main-nav__logo" src="/img/logo-pink-white-mobile.svg" alt="logo">
+                </picture>
+              </a>
+            </li>
             <li class="main-nav__item"><a href="/index.html" class="main-nav__link">Главная</a></li>
             <li class="main-nav__item"><a href="/photo.html" class="main-nav__link">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Конкурс</a></li>
