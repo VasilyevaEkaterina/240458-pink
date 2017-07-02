@@ -180,6 +180,14 @@
   background-color: none;
   margin-top: 30px;
 }
+.intro__btn:hover {
+  color: $pink;
+  background-color: #ffffff;
+}
+.intro__btn:active {
+  color: rgba($pink,0.3);
+  background-color: #ffffff;
+}
 .intro__text {
   text-align: center;
   padding-top: 20px;

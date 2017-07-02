@@ -4,6 +4,7 @@
   position: relative;
   display: block;
   text-align: center;
+  cursor: pointer;
   @media (min-width: $tablet-widths) {
     padding-right: 50px;
     display: flex;
@@ -22,4 +23,11 @@
   @media (min-width: $tablet-widths) {
     right: 5px;
   }
+}
+.copyright:hover::after {
+  background-image: url("/img/htmlacademy-black.svg");
+}
+.copyright:active::after {
+  background-image: url("/img/htmlacademy-black.svg");
+  opacity: 0.3;
 }

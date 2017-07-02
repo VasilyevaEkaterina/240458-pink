@@ -1,6 +1,87 @@
 .research {
-  display: none;
+  @media (min-width: $tablet-widths) {
+    background-color: #ffffff;
+  }
+  @media (min-width: $desktop-widths) {
+    background-color: $bg-grey;
+  }
 }
 .research__inner {
-  @include container ;
+  @include container;
+  display: none;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 105px;
+    padding-bottom: 90px;
+  }
+}
+.research__inner::before {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    content: "24";
+    font-size: 80px;
+    padding: 53px 23px;
+    color: $pink;
+    border: 8px solid $pink;
+    border-radius: 50%;
+    left: 102px;
+    top: 113px;
+  }
+  @media (min-width: $desktop-widths) {
+    background-color: $bg-grey;
+  }
+}
+.research__inner::after {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-timer.svg");
+    background-size: 198px 246px;
+    width: 198px;
+    height: 246px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 80px;
+  }
+}
+.research__title {
+  @media (min-width: $tablet-widths) {
+    width: 50%;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+}
+.research__tablet-wrap {
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+  @media (min-width: $desktop-widths) {
+    display: inline;
+  }
+}
+.research__text {
+  @media (min-width: $tablet-widths) {
+    width: 50%;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+}
+.research__link {
+  @media (min-width: $tablet-widths) {
+    width: 50%;
+    align-self: flex-end;
+    color: $pink;
+    text-decoration: underline;
+  }
 }

@@ -21,8 +21,8 @@
                 </picture>
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">Главная</a>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
               <a href="/photo.html" class="main-nav__link">Фотографии</a>
@@ -91,9 +91,9 @@
       </div>
       <div class="research">
         <div class="research__inner">
-          <h2 class="research__title">Эффект на 24 часа!</h2>
+          <h2 class="research__title">Эффект <span class="research__tablet-wrap">на 24 часа!</span></h2>
           <p class="research__text">Британские ученые провели исследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a class="research__link">Узнать больше об исследовании</a>
+          <a class="research__link" href="#">Узнать больше об исследовании</a>
         </div>
       </div>
       <div class="review">
@@ -125,39 +125,44 @@
       </div>
       <div class="prices">
         <div class="prices__inner">
-          <div class="prices__header">
-            <ul class="prices__row prices__row--header">
-              <li class="prices__column prices__column--base">
-                База 1,99 USD
-              </li>
-              <li class="prices__column prices__column--standart">
-                Стандарт 3,99 USD
-                <span class="prices__label">хит</span>
-              </li>
-              <li class="prices__column prices__column--unlimited">
-                Анлим 9,99 USD
-              </li>
-            </ul>
-          </div>
-          <div class="prices__content">
-            <ul class="prices__row prices__row--filter">
-              <li class="prices__column prices__column--title">Розовый фильтр</li>
-              <li class="prices__column prices__column--base"></li>
-              <li class="prices__column prices__column--standart"></li>
-              <li class="prices__column prices__column--unlimited"></li>
-            </ul>
-            <ul class="prices__row prices__row--smile">
-              <li class="prices__column prices__column--title">Смайлики</li>
-              <li class="prices__column prices__column--base"></li>
-              <li class="prices__column prices__column--standart"></li>
-              <li class="prices__column prices__column--unlimited"></li>
-            </ul>
-            <ul class="prices__row prices__row--comments">
-              <li class="prices__column prices__column--title">Комментарии</li>
-              <li class="prices__column prices__column--base"></li>
-              <li class="prices__column prices__column--standart"></li>
-              <li class="prices__column prices__column--unlimited"></li>
-            </ul>
+          <div class="prices__table">
+            <div class="prices__header">
+              <ul class="prices__row prices__row--header">
+                <li class="prices__column prices__column--header prices__column--blank"></li>
+                <li class="prices__column prices__column--header">
+                  База
+                  <span class="prices__price">1,99 USD</span>
+                </li>
+                <li class="prices__column prices__column--header prices__column--popular">
+                  Стандарт
+                  <span class="prices__price">3,99 USD</span>
+                </li>
+                <li class="prices__column prices__column--header">
+                  Анлим
+                  <span class="prices__price">9,99 USD</span>
+                </li>
+              </ul>
+            </div>
+            <div class="prices__content">
+              <ul class="prices__row prices__row--filter">
+                <li class="prices__column prices__column--title">Розовый фильтр</li>
+                <li class="prices__column prices__column--tick"></li>
+                <li class="prices__column prices__column--tick"></li>
+                <li class="prices__column prices__column--tick"></li>
+              </ul>
+              <ul class="prices__row prices__row--smile">
+                <li class="prices__column prices__column--title">Смайлики</li>
+                <li class="prices__column prices__column--cross">X</li>
+                <li class="prices__column prices__column--tick"></li>
+                <li class="prices__column prices__column--tick"></li>
+              </ul>
+              <ul class="prices__row prices__row--comments">
+                <li class="prices__column prices__column--title">Комментарии</li>
+                <li class="prices__column prices__column--cross">X</li>
+                <li class="prices__column prices__column--cross">X</li>
+                <li class="prices__column prices__column--tick"></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

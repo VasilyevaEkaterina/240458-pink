@@ -2,5 +2,68 @@
   background-color: $bg-grey;
 }
 .prices__inner {
-  @include container ;
+  @include container;
+  padding-top: 170px;
+  @media (max-width: $mobile-widths) {
+    overflow: hidden;
+  }
+}
+.prices__table {
+  display: table;
+  @media (max-width: $mobile-widths) {
+    width: 200%;
+  }
+  @media (min-width: $tablet-widths) {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+.prices__row {
+  display: table-row;
+}
+.prices__column {
+  display: table-cell;
+  text-align: center;
+  border: 1px solid #E6E6E6;
+  border-collapse: collapse;
+  padding: 10px;
+}
+.prices__column--header {
+  border-bottom: 0;
+}
+.prices__header {
+  display: table-header-group;
+  background-color: $bg;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.prices__column--blank {
+  background-color: $bg-grey;
+  border: 0;
+}
+.prices__column--title {
+  text-align: left;
+}
+.prices__price {
+  display: block;
+  font-weight: 300;
+  font-size: 20px;
+}
+.prices__content {
+  display: table-row-group;
+  background-color: #ffffff;
+}
+.prices__column--tick {
+  position: relative;
+}
+.prices__column--tick {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-yes.svg");
+  background-size: 22px 17px;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 17px;
 }

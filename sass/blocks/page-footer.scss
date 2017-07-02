@@ -22,6 +22,7 @@
   position: relative;
   padding-bottom: 70px;
   justify-content: center;
+  cursor: pointer;
   @media (min-width: $tablet-widths) {
     align-self: flex-start;
     width: 147px;
@@ -41,4 +42,7 @@
   @media (min-width: $desktop-widths) {
     background-image: url("/img/logo-pink-blue-desktop.svg");
   }
+}
+.page-footer__logo:active::after {
+  opacity: 0.3;
 }

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
+  cursor: pointer;
   @media (min-width: $tablet-widths) {
     justify-content: space-between;
     width: 150px;
@@ -18,6 +19,12 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
+}
+.social-btns__btn:hover {
+  border: 2px solid #000000;
+}
+.social-btns__btn:active {
+  opacity: 0.3;
 }
 .social-btns__btn--tw {
   position: relative;

@@ -63,6 +63,13 @@
   text-decoration: none;
   color: $pink;
 }
+.contacts__email:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.contacts__email:active {
+  color: $bg-grey;
+}
 .contacts__map {
   position: relative;
   background-repeat: no-repeat;
