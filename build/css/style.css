@@ -17,15 +17,6 @@
   font-weight: 300;
   font-style: normal; }
 
-body {
-  font-size: 14px;
-  line-height: 28px;
-  color: #000000;
-  font-family: "Open Sans", "Arial", sans-serif;
-  padding: 0;
-  background-color: #ffffff;
-  margin: 0 auto; }
-
 .advantages {
   background-color: #F2F2F2; }
 
@@ -359,14 +350,142 @@ body {
     background-image: url("/img/icon-menu-burger.svg"); }
 
 .photo-editor__inner {
+  background-color: #F2F2F2;
   width: 320px;
   border: 1px dashed #d22856;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 20px; }
+
+.photo-editor__photo {
+  display: block;
+  text-align: center; }
+
+.photo-editor__btns {
+  padding: 20px; }
+
+.photo-editor__post {
+  width: 280px;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  text-decoration: none;
+  color: #d22856;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  border: 2px solid #d22856;
+  padding: 15px 20px;
+  border-radius: 40px;
+  background-color: #F2F2F2; }
+
+.photo-editor__post:hover {
+  color: #ffffff;
+  background-color: #d22856; }
+
+.photo-editor__post:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d22856; }
+
+.photo-editor__cancel {
+  width: 280px;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  text-decoration: none;
+  color: #B5B8BD;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  border: 2px solid #B5B8BD;
+  padding: 15px 20px;
+  border-radius: 40px;
+  background-color: #F2F2F2;
+  margin-top: 15px;
+  opacity: 0.5; }
+
+.photo-editor__cancel:hover {
+  color: #B5B8BD;
+  background-color: #F2F2F2;
+  opacity: 1; }
+
+.photo-editor__cancel:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #B5B8BD; }
 
 .photos__inner {
   width: 320px;
   border: 1px dashed #d22856;
   margin: 0 auto; }
+
+.photos__text {
+  text-align: center;
+  padding: 30px 35px; }
+
+.photos__item {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.photos__item--main {
+  padding: 0; }
+
+.photos__photo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%; }
+
+.photos__photo--main {
+  width: 320px; }
+
+.photos__photo:last-child {
+  margin-top: 0; }
+
+.photos__link {
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+
+.photos__image--main {
+  position: relative;
+  width: 320px; }
+
+.photos__image--main::before {
+  position: absolute;
+  content: "Панорама дня";
+  text-transform: uppercase;
+  background-color: #d22856;
+  color: #ffffff;
+  top: 0;
+  padding: 5px 15px;
+  right: 25px; }
+
+.photos__content {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.photos__name {
+  font-weight: 700; }
+
+.photos__time {
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.photos__likes {
+  color: #d22856;
+  position: relative;
+  text-transform: uppercase; }
+
+.photos__likes::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-heart.svg");
+  background-size: 12px 13px;
+  width: 12px;
+  height: 13px;
+  top: 0;
+  right: 0;
+  z-index: 10000; }
 
 .prices {
   background-color: #F2F2F2; }
@@ -706,8 +825,13 @@ body {
   top: 30%; }
 
 body {
-  margin: 0;
-  padding: 0; }
+  font-size: 14px;
+  line-height: 28px;
+  color: #000000;
+  font-family: "Open Sans", "Arial", sans-serif;
+  padding: 0;
+  background-color: #ffffff;
+  margin: 0 auto; }
 
 @media (min-width: 660px){
   .advantages__inner{
@@ -830,7 +954,29 @@ body {
     display: none; }
   .photo-editor__inner{
     width: 660px; }
+  .photo-editor__inner{
+    display: -ms-flexbox;
+    display: flex; }
+  .photo-editor__photo{
+    width: 50%; }
+  .photo-editor__tools{
+    width: 50%; }
   .photos__inner{
+    width: 660px; }
+  .photos__inner{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .photos__text{
+    padding: 60px 120px;
+    display: block;
+    width: 100%; }
+  .photos__photo{
+    width: 50%; }
+  .photos__photo--main{
+    width: 660px; }
+  .photos__image--main{
     width: 660px; }
   .prices__inner{
     width: 660px; }
@@ -1109,7 +1255,25 @@ body {
     display: none; }
   .photo-editor__inner{
     width: 960px; }
+  .photo-editor__btns{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center; }
+  .photo-editor__cancel{
+    margin: 0;
+    margin-left: 20px; }
   .photos__inner{
+    width: 960px; }
+  .photos__text{
+    padding: 80px 240px; }
+  .photos__photo{
+    width: 33.333333%; }
+  .photos__photo--main{
+    width: 960px; }
+  .photos__image--main{
     width: 960px; }
   .prices__inner{
     width: 960px; }

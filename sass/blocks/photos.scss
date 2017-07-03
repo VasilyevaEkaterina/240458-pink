@@ -1,3 +1,101 @@
 .photos__inner {
-  @include container ;
+  @include container;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.photos__text {
+  text-align: center;
+  padding: 30px 35px;
+  @media (min-width: $tablet-widths) {
+    padding: 60px 120px;
+    display: block;
+    width: 100%;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 80px 240px;
+  }
+}
+.photos__item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.photos__item--main {
+  padding: 0;
+}
+.photos__photo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  @media (min-width: $tablet-widths) {
+    width: 50%;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 33.333333%;
+  }
+}
+.photos__photo--main {
+  width: 320px;
+  @media (min-width: $tablet-widths) {
+    width: 660px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 960px;
+  }
+}
+.photos__photo:last-child {
+  margin-top: 0;
+}
+.photos__link {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.photos__image--main {
+  position: relative;
+  width: 320px;
+  @media (min-width: $tablet-widths) {
+    width: 660px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 960px;
+  }
+}
+.photos__image--main::before {
+  position: absolute;
+  content: "Панорама дня";
+  text-transform: uppercase;
+  background-color: $pink;
+  color: #ffffff;
+  top: 0;
+  padding: 5px 15px;
+  right: 25px;
+}
+.photos__content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.photos__name {
+  font-weight: 700;
+}
+.photos__time {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.photos__likes {
+  color: $pink;
+  position: relative;
+  text-transform: uppercase;
+}
+.photos__likes::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-heart.svg");
+  background-size: 12px 13px;
+  width: 12px;
+  height: 13px;
+  top: 0;
+  right: 0;
+  z-index: 10000;
 }

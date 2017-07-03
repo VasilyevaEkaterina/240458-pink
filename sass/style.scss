@@ -13,7 +13,6 @@
 @import "blocks/page-footer.scss";
 @import "blocks/page-header.scss";
 @import "blocks/photo-editor.scss";
-@import "blocks/photo.scss";
 @import "blocks/photos.scss";
 @import "blocks/prices.scss";
 @import "blocks/promo.scss";
@@ -22,6 +21,10 @@
 @import "blocks/social-btns.scss";
 
 body {
-  margin: 0;
+  @include text;
+  color: $text;
+  font-family: "Open Sans", "Arial", sans-serif;
   padding: 0;
+  background-color: #ffffff;
+  margin: 0 auto;
 }

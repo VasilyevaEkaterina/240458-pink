@@ -20,11 +20,3 @@
    font-weight: 300;
    font-style: normal;
 }
-body {
-  @include text;
-  color: $text;
-  font-family: "Open Sans", "Arial", sans-serif;
-  padding: 0;
-  background-color: #ffffff;
-  margin: 0 auto;
-}
