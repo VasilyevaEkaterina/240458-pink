@@ -4,6 +4,7 @@
 .prices__inner {
   @include container;
   padding-top: 170px;
+  padding-bottom: 80px;
   @media (max-width: $mobile-widths) {
     overflow: hidden;
   }
@@ -11,9 +12,15 @@
 .prices__table {
   display: table;
   @media (max-width: $mobile-widths) {
-    width: 200%;
+    width: 330%;
+    transform: translateX(-46%);
   }
   @media (min-width: $tablet-widths) {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  @media (min-width: $desktop-widths) {
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;
@@ -24,10 +31,9 @@
 }
 .prices__column {
   display: table-cell;
-  text-align: center;
   border: 1px solid #E6E6E6;
   border-collapse: collapse;
-  padding: 10px;
+  padding: 15px 20px;
 }
 .prices__column--header {
   border-bottom: 0;
@@ -38,6 +44,7 @@
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
+  text-align: center;
 }
 .prices__column--blank {
   background-color: $bg-grey;
@@ -46,10 +53,17 @@
 .prices__column--title {
   text-align: left;
 }
+.prices__column--mobile {
+  text-align: left;
+  text-transform: uppercase;
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
 .prices__price {
   display: block;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
 }
 .prices__content {
   display: table-row-group;
@@ -58,12 +72,104 @@
 .prices__column--tick {
   position: relative;
 }
-.prices__column--tick {
+.prices__column--tick::after {
   position: absolute;
   content: "";
   background-image: url("/img/icon-yes.svg");
-  background-size: 22px 17px;
+  background-size: 27px 27px;
   background-repeat: no-repeat;
-  width: 22px;
-  height: 17px;
+  width: 27px;
+  height: 27px;
+  @media (max-width: $mobile-widths) {
+    right: 20px;
+  }
+  @media (min-width: $tablet-widths) {
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+.prices__column--cross {
+  position: relative;
+}
+.prices__column--cross::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-no.svg");
+  background-size: 27px 27px;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+  @media (max-width: $mobile-widths) {
+    right: 20px;
+  }
+  @media (min-width: $tablet-widths) {
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+.prices__column--popular {
+  position: relative;
+}
+.prices__column--popular::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-hit-tablet.svg");
+  background-size: 61px 61px;
+  width: 61px;
+  height: 61px;
+  top: 0;
+  left: -3px;
+}
+.prices__column--popular::before {
+  position: absolute;
+  content: "Хит";
+  transform: rotate(-45deg);
+  z-index: 100;
+  top: 5px;
+  left: 5px;
+}
+.prices__controls {
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+.prices input[type=radio] {
+  display: none;
+}
+.prices__label {
+  cursor: pointer;
+}
+.prices__btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+.prices__input + .prices__label {
+  position: relative;
+  padding-right: 20px;
+}
+.prices__input + .prices__label::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: $bg-grey;
+  border-radius: 50%;
+  top: 0;
+}
+.prices__input:hover + .prices__label::before {
+  background-color: rgba(0,0,0,0.3);
+}
+.prices__input:active + .prices__label::before {
+  background-color: rgba($bg-grey,0.3);
+}
+.prices__input:checked + .prices__label::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: none;
+  border: 3px solid $bg;
+  border-radius: 50%;
+  left: -3px;
+  top: -3px;
 }

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+    document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -146,22 +150,36 @@
             <div class="prices__content">
               <ul class="prices__row prices__row--filter">
                 <li class="prices__column prices__column--title">Розовый фильтр</li>
-                <li class="prices__column prices__column--tick"></li>
-                <li class="prices__column prices__column--tick"></li>
-                <li class="prices__column prices__column--tick"></li>
+                <li class="prices__column prices__column--tick"><span class="prices__column--mobile">Розовый фильтр</span></li>
+                <li class="prices__column prices__column--tick"><span class="prices__column--mobile">Розовый фильтр</span></li>
+                <li class="prices__column prices__column--tick"><span class="prices__column--mobile">Розовый фильтр</span></li>
               </ul>
               <ul class="prices__row prices__row--smile">
                 <li class="prices__column prices__column--title">Смайлики</li>
-                <li class="prices__column prices__column--cross">X</li>
-                <li class="prices__column prices__column--tick"></li>
-                <li class="prices__column prices__column--tick"></li>
+                <li class="prices__column prices__column--cross"><span class="prices__column--mobile">Смайлики</span></li>
+                <li class="prices__column prices__column--tick"><span class="prices__column--mobile">Смайлики</span></li>
+                <li class="prices__column prices__column--tick"><span class="prices__column--mobile">Смайлики</span></li>
               </ul>
               <ul class="prices__row prices__row--comments">
                 <li class="prices__column prices__column--title">Комментарии</li>
-                <li class="prices__column prices__column--cross">X</li>
-                <li class="prices__column prices__column--cross">X</li>
-                <li class="prices__column prices__column--tick"></li>
+                <li class="prices__column prices__column--cross"><span class="prices__column--mobile">Комментарии</span></li>
+                <li class="prices__column prices__column--cross"><span class="prices__column--mobile">Комментарии</span></li>
+                <li class="prices__column prices__column--tick"><span class="prices__column--mobile">Комментарии</span></li>
               </ul>
+            </div>
+            <div class="prices__controls">
+              <div class="prices__btn prices__btn--prev">
+                <input type="radio" class="prices__input" id="prices__btn-1" name="prices-btn">
+                <label for="prices__btn-1" class="prices__label"></label>
+              </div>
+              <div class="prices__btn prices__btn--active">
+                <input type="radio" class="prices__input" id="prices__btn-2" name="prices-btn" checked>
+                <label for="prices__btn-2" class="prices__label"></label>
+              </div>
+              <div class="prices__btn prices__btn--next">
+                <input type="radio" class="prices__input" id="prices__btn-3" name="prices-btn">
+                <label for="prices__btn-3" class="prices__label"></label>
+              </div>
             </div>
           </div>
         </div>
