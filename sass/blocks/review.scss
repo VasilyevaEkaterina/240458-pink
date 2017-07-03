@@ -11,7 +11,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 50%;
+  height: 18%;
   @media (min-width: $tablet-widths) {
     width: 100%;
   }
@@ -22,9 +22,12 @@
   text-align: center;
   cursor: pointer;
 }
+.review__slide-list {
+  padding-bottom: 28px;
+}
 .review__slide {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   padding-bottom: 0;
   @media (min-width: $tablet-widths) {
     display: flex;
@@ -77,6 +80,9 @@
 }
 .review__details {
   display: none;
+  @include text
+  padding: 0;
+  margin: 0;
   @media (min-width: $tablet-widths) {
     display: block;
     width: 100%;
@@ -85,13 +91,22 @@
   }
 }
 .review__text {
+  @include text;
+  line-height: 30px;
   position: relative;
   display: block;
+  padding: 0;
+  margin: 0;
   @media (min-width: $tablet-widths) {
     order: 1;
   }
 }
 .review__name {
+  @include title;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 14px;
   @media (min-width: $tablet-widths) {
     display: block;
     width: 100%;
@@ -142,7 +157,7 @@
 }
 .review__input + .review__label {
   position: relative;
-  padding-right: 20px;
+  padding-right: 18px;
 }
 .review__input + .review__label::before {
   position: absolute;

@@ -5,7 +5,7 @@
 }
 .contacts__inner {
   @include container;
-  padding-top: 30px;
+  padding-top: 32px;
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-wrap: wrap;
@@ -13,8 +13,11 @@
 }
 .contacts__title {
   @include title;
-  font-size: 33px;
-  line-height: 45px;
+  font-size: 23px;
+  line-height: 35px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
   @media (min-width: $tablet-widths) {
     padding-left: 150px;
     padding-right: 150px;
@@ -25,13 +28,15 @@
     font-size: 35px;
   }
 }
-
 .contacts__text {
+  @include text;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
 }
 .contacts__item {
-  padding-top: 30px;
+  padding-top: 18px;
   @media (min-width: $tablet-widths) {
     width: 50%;
   }
@@ -42,6 +47,8 @@
   }
 }
 .contacts__item--address {
+  padding-left: 20px;
+  padding-right: 20px;
   @media (min-width: $tablet-widths) {
     width: 100%;
     padding-left: 180px;
@@ -60,7 +67,9 @@
 .contacts__email,
 .contacts__address {
   @include title;
-  font-size: 24px;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 300;
   text-decoration: none;
   color: $pink;
 }
@@ -116,7 +125,6 @@
   left: 1px;
   width: 50%;
   height: 50%;
-
 }
 .contacts__map::before {
   position: absolute;

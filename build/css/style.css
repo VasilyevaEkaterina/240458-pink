@@ -24,13 +24,31 @@
   width: 320px;
   border: 1px dashed #d22856;
   margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 300px;
+  padding-top: 95px;
+  padding-bottom: 310px;
   overflow: hidden; }
 
 .advantages__item {
-  padding: 10px 20px;
+  padding: 9px 19px;
   text-align: center; }
+
+.advantages__title {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0;
+  margin: 0; }
+
+.advantages__text {
+  font-size: 14px;
+  line-height: 28px;
+  line-height: 28px;
+  padding: 0;
+  margin: 0; }
+
+.advantages__mobile-wrap {
+  display: block; }
 
 .advantages__photo--left {
   position: relative; }
@@ -58,27 +76,42 @@
   width: 320px;
   border: 1px dashed #d22856;
   margin: 0 auto;
-  padding-top: 30px; }
+  padding-top: 32px; }
 
 .contacts__title {
   font-size: 30px;
   line-height: 35px;
-  font-size: 33px;
-  line-height: 45px; }
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 35px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0; }
 
 .contacts__text {
+  font-size: 14px;
+  line-height: 28px;
   font-weight: 700;
-  font-size: 20px; }
+  font-size: 18px;
+  padding: 0;
+  margin: 0; }
 
 .contacts__item {
-  padding-top: 30px; }
+  padding-top: 18px; }
+
+.contacts__item--address {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .contacts__tel,
 .contacts__email,
 .contacts__address {
   font-size: 30px;
   line-height: 35px;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 300;
   text-decoration: none;
   color: #d22856; }
 
@@ -298,6 +331,7 @@
   outline: none;
   background-color: none;
   border: none;
+  cursor: pointer;
   color: #ffffff;
   background-color: #2aab6d;
   text-transform: uppercase;
@@ -326,7 +360,7 @@
   background-position: top; }
 
 .intro__photo {
-  padding-top: 200px;
+  padding-top: 130px;
   padding-bottom: 270px;
   margin-top: 1px;
   position: relative;
@@ -339,8 +373,7 @@
   position: absolute;
   background-repeat: no-repeat;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   z-index: 1000; }
 
 .intro__title {
@@ -350,6 +383,7 @@
   text-align: center;
   font-size: 30px;
   line-height: 35px;
+  font-weight: 700;
   line-height: 35px;
   font-weight: 300; }
 
@@ -375,7 +409,7 @@
 .intro__btn {
   text-decoration: none;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   display: block;
   text-align: center;
@@ -395,7 +429,7 @@
 
 .intro__text {
   text-align: center;
-  padding-top: 20px; }
+  padding-bottom: 8px; }
 
 .main-nav {
   position: relative;
@@ -422,9 +456,10 @@
 .main-nav__link {
   display: block;
   vertical-align: middle;
+  font-size: 18px;
   line-height: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -775,8 +810,8 @@
   width: 320px;
   border: 1px dashed #d22856;
   margin: 0 auto;
-  padding-top: 170px;
-  padding-bottom: 80px; }
+  padding-top: 115px;
+  padding-bottom: 75px; }
 
 .prices__table {
   display: table; }
@@ -791,9 +826,16 @@
   padding: 15px 20px; }
 
 .prices__column--header {
-  border-bottom: 0; }
+  border-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .prices__header {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
   display: table-header-group;
   background-color: #283645;
   color: #ffffff;
@@ -815,7 +857,7 @@
 .prices__price {
   display: block;
   font-weight: 300;
-  font-size: 18px; }
+  font-size: 24px; }
 
 .prices__content {
   display: table-row-group;
@@ -851,7 +893,7 @@
 .prices__column--popular::after {
   position: absolute;
   content: "";
-  background-image: url("/img/bg-hit-tablet.svg");
+  background-image: url("/img/bg-hit.svg");
   background-size: 61px 61px;
   width: 61px;
   height: 61px;
@@ -887,7 +929,8 @@
   height: 7px;
   background-color: #F2F2F2;
   border-radius: 50%;
-  top: 0; }
+  top: 0;
+  z-index: 4000; }
 
 .prices__input:hover + .prices__label::before {
   background-color: rgba(0, 0, 0, 0.3); }
@@ -917,7 +960,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 50%; }
+  height: 30%; }
 
 .promo__inner {
   width: 320px;
@@ -927,11 +970,12 @@
 .promo__title {
   font-size: 30px;
   line-height: 35px;
+  font-weight: 700;
+  font-size: 23px;
   font-weight: 300;
-  padding: 0 20px;
-  padding-top: 30px;
+  padding-top: 33px;
   text-align: center;
-  line-height: 40px; }
+  line-height: 34px; }
 
 .promo__mobile-wrap {
   display: block;
@@ -959,7 +1003,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 50%; }
+  height: 18%; }
 
 .review__slider {
   position: relative;
@@ -967,9 +1011,12 @@
   text-align: center;
   cursor: pointer; }
 
+.review__slide-list {
+  padding-bottom: 28px; }
+
 .review__slide {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   padding-bottom: 0; }
 
 .review__slide:hover::before {
@@ -979,11 +1026,29 @@
   opacity: 1; }
 
 .review__details {
-  display: none; }
+  display: none;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 0;
+  margin: 0; }
 
 .review__text {
+  font-size: 14px;
+  line-height: 28px;
+  line-height: 30px;
   position: relative;
-  display: block; }
+  display: block;
+  padding: 0;
+  margin: 0; }
+
+.review__name {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 14px; }
 
 .review__text::before {
   position: absolute;
@@ -1006,7 +1071,7 @@
 
 .review__input + .review__label {
   position: relative;
-  padding-right: 20px; }
+  padding-right: 18px; }
 
 .review__input + .review__label::before {
   position: absolute;
@@ -1127,6 +1192,8 @@ body {
     text-align: left;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
+  .advantages__mobile-wrap{
+    display: inline; }
   .advantages__description{
     width: 50%;
     padding-right: 20px; }
@@ -1660,7 +1727,7 @@ body {
 @media (max-width: 659px){
   .advantages__photo--right::after{
     background-image: url("/img/iphone-screen-mobile@1x.png");
-    top: 200px;
+    top: 150px;
     transform: translateX(-50%);
     left: 50%; }
   .contacts__map{
@@ -1680,10 +1747,10 @@ body {
   .prices__inner{
     overflow: hidden; }
   .prices__table{
-    width: 330%;
-    transform: translateX(-46%); }
+    width: 340%;
+    transform: translateX(-47%); }
   .prices__column--tick::after{
-    right: 20px; }
+    right: 16px; }
   .prices__column--cross::after{
     right: 20px; } }
 

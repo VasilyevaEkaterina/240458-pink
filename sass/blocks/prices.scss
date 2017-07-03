@@ -3,8 +3,8 @@
 }
 .prices__inner {
   @include container;
-  padding-top: 170px;
-  padding-bottom: 80px;
+  padding-top: 115px;
+  padding-bottom: 75px;
   @media (max-width: $mobile-widths) {
     overflow: hidden;
   }
@@ -12,8 +12,8 @@
 .prices__table {
   display: table;
   @media (max-width: $mobile-widths) {
-    width: 330%;
-    transform: translateX(-46%);
+    width: 340%;
+    transform: translateX(-47%);
   }
   @media (min-width: $tablet-widths) {
     width: 96%;
@@ -37,8 +37,13 @@
 }
 .prices__column--header {
   border-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .prices__header {
+  @include title;
+  font-size: 18px;
+  line-height: 28px;
   display: table-header-group;
   background-color: $bg;
   color: #ffffff;
@@ -63,7 +68,7 @@
 .prices__price {
   display: block;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 24px;
 }
 .prices__content {
   display: table-row-group;
@@ -81,7 +86,7 @@
   width: 27px;
   height: 27px;
   @media (max-width: $mobile-widths) {
-    right: 20px;
+    right: 16px;
   }
   @media (min-width: $tablet-widths) {
     transform: translateX(-50%);
@@ -113,7 +118,7 @@
 .prices__column--popular::after {
   position: absolute;
   content: "";
-  background-image: url("/img/bg-hit-tablet.svg");
+  background-image: url("/img/bg-hit.svg");
   background-size: 61px 61px;
   width: 61px;
   height: 61px;
@@ -155,6 +160,7 @@
   background-color: $bg-grey;
   border-radius: 50%;
   top: 0;
+  z-index: 4000;
 }
 .prices__input:hover + .prices__label::before {
   background-color: rgba(0,0,0,0.3);
