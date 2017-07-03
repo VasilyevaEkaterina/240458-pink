@@ -1,3 +1,60 @@
 .form__inner {
   @include container ;
 }
+.form__text {
+  text-align: center;
+  padding: 30px 20px;
+  @media (min-width: $tablet-widths) {
+    padding: 60px 130px;
+    display: block;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 80px 200px;
+  }
+}
+.form__mobile-hidden {
+  display: none;
+  @media (min-width: $tablet-widths) {
+    display: inline;
+  }
+}
+.form__title {
+  color: $pink;
+  text-align: center;
+  font-weight: 300;
+}
+.form__label {
+  display: block;
+  text-transform: uppercase;
+}
+.form__label--name {
+  color: $pink;
+}
+.form__button {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.form__btn {
+  outline: none;
+  background-color: none;
+  border: none;
+  color: #ffffff;
+  background-color: $green;
+  text-transform: uppercase;
+  width: 280px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+}
+.form__btn:hover {
+  background-color: $green-hvr;
+}
+.form__btn:active {
+  background-color: $green;
+  color: #B5B8BD;
+}
+.form__required {
+  display: block;
+}

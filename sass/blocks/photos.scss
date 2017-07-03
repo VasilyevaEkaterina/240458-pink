@@ -51,12 +51,19 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  background-color: $bg-grey;
+}
+.photos__image {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 .photos__image--main {
   position: relative;
   width: 320px;
   @media (min-width: $tablet-widths) {
     width: 660px;
+    height: 280px;
   }
   @media (min-width: $desktop-widths) {
     width: 960px;
@@ -73,8 +80,8 @@
   right: 25px;
 }
 .photos__content {
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: $bg-grey;
+  padding: 20px;
 }
 .photos__name {
   font-weight: 700;
