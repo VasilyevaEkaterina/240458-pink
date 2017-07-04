@@ -19,9 +19,9 @@
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
-                  <source media="(min-width: 768px)" srcset="/img/logo-pink-white-tablet.svg">
-                  <img class="main-nav__logo" src="/img/logo-pink-white-mobile.svg" alt="logo">
+                  <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="main-nav__logo" src="img/logo-pink-white-mobile.svg" alt="logo">
                 </picture>
               </a>
             </li>
@@ -40,8 +40,8 @@
     <main class="main">
       <div class="photos">
         <div class="photos__inner">
-          <p class="photos__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-          <div class="photos__photo photos__photo--main">
+          <p class="photos__text photos__text--head">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+          <div class="photos__panorama">
             <div class="photos__item photos__item--main">
               <a href="#" class="photos__link">
                 <picture>
@@ -51,11 +51,11 @@
                 </picture>
               </a>
               <div class="photos__content photos__content--main">
-                <div class="photos__name-time">
+                <div class="photos__name-time photos__name-time--main">
                   <span class="photos__name">Анна</span>
                   <span class="photos__time">(5 минут назад)</span>
                 </div>
-                <p class="photos__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте вопросы!</p>
+                <p class="photos__description photos__description--main">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
                 <div class="photos__likes photos__likes--main">Нравится: 215</div>
               </div>
             </div>
@@ -174,7 +174,7 @@
               </div>
             </div>
           </div>
-          <p class="photos__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="photos__text"><span class="photos__mobile-wrap">Затмите их всех!</span> Выкладывайте все, что накопилось в телефоне!</p>
         </div>
       </div>
       <div class="photo-editor">
@@ -183,7 +183,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
-              <img class="photos__image" src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" alt="Фото">
+              <img class="photo-editor__image" src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" alt="Фото">
             </picture>
           </div>
           <form class="photo-editor__tools" action="https://echo.htmlacademy.ru" method="post">

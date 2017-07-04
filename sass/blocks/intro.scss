@@ -102,16 +102,27 @@
   }
 }
 .intro__title {
-  padding-top: 30px;
-  padding-bottom: 70px;
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 80px;
   margin: 0;
   text-align: center;
   @include title;
-  line-height: 35px;
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 300;
   @media (min-width: $tablet-widths) {
     width: 100%;
-    padding: 100px 140px;
+    padding: 115px 140px;
+    padding-top: 75px;
+    padding-bottom: 145px;
+    font-size: 47px;
+    line-height: 55px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-left: 200px;
+    padding-right: 200px;
+    line-height: 60px;
   }
 }
 .intro__title--index {
@@ -119,7 +130,6 @@
   @media (min-width: $tablet-widths) {
     display: block;
     color: #ffffff;
-    text-align: center;
     padding: 0;
     padding-left: 70px;
     padding-right: 70px;

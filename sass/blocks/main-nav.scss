@@ -36,7 +36,7 @@
   box-shadow: 0 -1px 1px 0 rgba(0,0,0,0.5),
               0 1px 1px 0 rgba(0,0,0,0.5);
   @media (min-width: $desktop-widths) {
-    box-shadow: 0 0 0 0 white;
+    box-shadow: 0 0 0 0 #ffffff;
   }
 }
 .main-nav__link {
@@ -52,7 +52,11 @@
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
+  @media(min-width: $tablet-widths) {
+    padding-bottom: 18px;
+  }
   @media (min-width: $desktop-widths) {
+    font-size: 15px;
     font-weight: 400;
     text-transform: none;
   }
@@ -71,6 +75,9 @@
   padding: 10px 20px;
   display: block;
   padding-right: 250px;
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 25px;
+  }
 }
 .main-nav__link:hover {
   fill: $pink;

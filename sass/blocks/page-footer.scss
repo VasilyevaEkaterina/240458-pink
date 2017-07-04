@@ -1,9 +1,6 @@
-.page-footer {
-
-}
 .page-footer__inner {
   @include container;
-  padding-top: 30px;
+  padding-top: 35px;
   padding-bottom: 30px;
   text-align: center;
   @media (min-width: $tablet-widths) {
@@ -20,7 +17,7 @@
   display: flex;
   flex-basis: 100%;
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 87px;
   justify-content: center;
   cursor: pointer;
   @media (min-width: $tablet-widths) {

@@ -6,16 +6,33 @@
   }
 }
 .photos__text {
+  @include text;
+  line-height: 30px;
   text-align: center;
-  padding: 30px 35px;
+  padding: 15px 35px;
   @media (min-width: $tablet-widths) {
-    padding: 60px 120px;
+    padding: 35px 100px;
     display: block;
     width: 100%;
+    font-size: 18px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 60px 240px;
+  }
+}
+.photos__text--head {
+  padding: 30px 35px;
+  @media (min-width: $tablet-widths) {
+    padding: 73px 100px;
+    padding-bottom: 40px;
+    font-size: 18px;
   }
   @media (min-width: $desktop-widths) {
     padding: 80px 240px;
   }
+}
+.photos__mobile-wrap {
+  display: block;
 }
 .photos__item {
   padding-left: 20px;
@@ -23,29 +40,26 @@
 }
 .photos__item--main {
   padding: 0;
+  margin: 0;
 }
 .photos__photo {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 18px;
+  margin-bottom: 18px;
   width: 100%;
   @media (min-width: $tablet-widths) {
+    display: flex;
     width: 50%;
   }
   @media (min-width: $desktop-widths) {
     width: 33.333333%;
   }
 }
-.photos__photo--main {
-  width: 320px;
-  @media (min-width: $tablet-widths) {
-    width: 660px;
-  }
-  @media (min-width: $desktop-widths) {
-    width: 960px;
-  }
+.photos__panorama {
+  width: 100%;
 }
 .photos__photo:last-child {
   margin-top: 0;
+  margin-bottom: 0;
 }
 .photos__link {
   text-align: center;
@@ -55,19 +69,14 @@
 }
 .photos__image {
   display: block;
+  width: 100%;
   padding: 0;
   margin: 0;
 }
 .photos__image--main {
   position: relative;
-  width: 320px;
-  @media (min-width: $tablet-widths) {
-    width: 660px;
-    height: 280px;
-  }
-  @media (min-width: $desktop-widths) {
-    width: 960px;
-  }
+  padding: 0;
+  margin: 0;
 }
 .photos__image--main::before {
   position: absolute;
@@ -78,31 +87,90 @@
   top: 0;
   padding: 5px 15px;
   right: 25px;
+  z-index: 1000;
 }
 .photos__content {
   background-color: $bg-grey;
-  padding: 20px;
+  padding: 18px 10px;
+  padding-left: 17px;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.photos__content--main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.photos__name-time {
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+  }
 }
 .photos__name {
+  @include text;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
 .photos__time {
+  @include text;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
   font-weight: 300;
   text-transform: uppercase;
 }
+.photos__description {
+  padding: 0;
+  margin: 0;
+  @include text;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
 .photos__likes {
+  @include text;
+  font-size: 12px;
   color: $pink;
   position: relative;
   text-transform: uppercase;
+  padding-left: 30px;
+  @media (min-width: $tablet-widths) {
+    padding-left: 0;
+    align-items: flex-end;
+    width: 100%;
+  }
 }
-.photos__likes::after {
+.photos__likes::before {
   position: absolute;
   content: "";
   background-image: url("/img/icon-heart.svg");
   background-size: 12px 13px;
   width: 12px;
   height: 13px;
-  top: 0;
-  right: 0;
+  top: 7px;
+  left: 0;
   z-index: 10000;
+  @media (min-width: $tablet-widths) {
+    top: 7px;
+    left: 95%;
+  }
+}
+.photos__name-time--main {
+  @media (min-width: $tablet-widths) {
+    order: 1;
+    width: 50%;
+  }
+}
+.photos__likes--main {
+  @media (min-width: $tablet-widths) {
+    order: 2;
+    width: 50%;
+    text-align: right;
+  }
+}
+.photos__description--main {
+  @media (min-width: $tablet-widths) {
+    order: 3;
+  }
 }

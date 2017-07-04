@@ -60,6 +60,9 @@
 .review__slide:hover::before {
   opacity: 1;
 }
+.review__slide:active::before {
+  opacity: 0.3;
+}
 .review__slide::after {
   @media (min-width: $desktop-widths) {
     position: absolute;
@@ -77,6 +80,9 @@
 }
 .review__slide:hover::after {
   opacity: 1;
+}
+.review__slide:active::after {
+  opacity: 0.3;
 }
 .review__details {
   display: none;
