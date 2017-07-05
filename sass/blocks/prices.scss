@@ -1,16 +1,30 @@
 .prices {
   background-color: $bg-grey;
+  position: relative;
+}
+.prices::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-triangle-white.svg");
+  background-size: 102% auto;
+  background-repeat: no-repeat;
+  width: 102%;
+  height: 100%;
+  bottom: 0;
+  left: -2%;
+  right: 2%;
 }
 .prices__inner {
   @include container;
   padding-top: 115px;
-  padding-bottom: 75px;
+  padding-bottom: 25px;
+  overflow: hidden;
   @media (max-width: $mobile-widths) {
-    overflow: hidden;
   }
 }
 .prices__table {
   display: table;
+  padding-top: 60px;
   @media (max-width: $mobile-widths) {
     width: 340%;
     transform: translateX(-47%);
@@ -134,6 +148,9 @@
   left: 5px;
 }
 .prices__controls {
+  display: block;
+  text-align: center;
+  padding-top: 50px;
   @media (min-width: $tablet-widths) {
     display: none;
   }
@@ -157,7 +174,7 @@
   content: "";
   width: 7px;
   height: 7px;
-  background-color: $bg-grey;
+  background-color: $light-grey;
   border-radius: 50%;
   top: 0;
   z-index: 4000;

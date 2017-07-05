@@ -1,11 +1,23 @@
 .advantages {
   background-color: $bg-grey;
+  position: relative;
+}
+.advantages::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-triangle-white.svg");
+  background-size: 102% auto;
+  background-repeat: no-repeat;
+  width: 102%;
+  height: 100%;
+  bottom: 0;
+  left: -2%;
+  right: 2%;
 }
 .advantages__inner {
   @include container;
   padding-top: 95px;
   padding-bottom: 310px;
-  overflow: hidden;
   @media (min-width: $tablet-widths) {
     padding-top: 150px;
     padding-bottom: 20px;

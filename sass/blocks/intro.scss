@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  overflow: hidden;
   @media (min-width: $tablet-widths) {
     background-image: url("/img/bg-back-tablet@1x.jpg");
     display: flex;

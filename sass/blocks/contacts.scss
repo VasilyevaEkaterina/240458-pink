@@ -119,22 +119,23 @@
   position: absolute;
   content: "";
   background-image: url("/img/bg-triangle-white-footer.svg");
-  background-size: cover;
+  background-size: 102% auto;
   background-repeat: no-repeat;
-  top: -1px;
-  left: 1px;
-  width: 50%;
-  height: 50%;
+  width: 102%;
+  height: 100%;
+  bottom: 0;
+  left: -2%;
+  right: 2%;
 }
 .contacts__map::before {
   position: absolute;
   content: "";
   background-image: url("/img/bg-triangle-white-footer.svg");
-  background-size: cover;
+  background-size: 102% auto;
   background-repeat: no-repeat;
-  top: -1px;
-  right: 1px;
-  transform: scale(-1,1);
-  width: 50%;
-  height: 50%;
+  width: 102%;
+  height: 100%;
+  bottom: 0;
+  left: -2%;
+  right: 2%;
 }

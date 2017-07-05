@@ -28,12 +28,12 @@
     position: absolute;
     content: "24";
     font-size: 80px;
-    padding: 53px 23px;
+    padding: 43px 11px;
     color: $pink;
     border: 8px solid $pink;
     border-radius: 50%;
-    left: 102px;
-    top: 113px;
+    left: 130px;
+    top: 122px;
   }
   @media (min-width: $desktop-widths) {
     background-color: $bg-grey;
@@ -44,9 +44,9 @@
     position: absolute;
     content: "";
     background-image: url("/img/icon-timer.svg");
-    background-size: 198px 246px;
-    width: 198px;
-    height: 246px;
+    background-size: 229px 198px;
+    width: 229px;
+    height: 198px;
     transform: translateY(-50%);
     top: 50%;
     left: 80px;
