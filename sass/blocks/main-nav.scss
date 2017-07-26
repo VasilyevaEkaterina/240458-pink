@@ -45,7 +45,7 @@
   font-size: 18px;
   line-height: 30px;
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -74,7 +74,6 @@
 .main-nav__logo {
   padding: 10px 20px;
   display: block;
-  padding-right: 250px;
   @media (min-width: $tablet-widths) {
     padding-bottom: 25px;
   }

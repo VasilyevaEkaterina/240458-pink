@@ -1,11 +1,10 @@
 .contacts {
   text-align: center;
-  font-weight: 300;
   background-color: #ffffff;
 }
 .contacts__inner {
   @include container;
-  padding-top: 32px;
+  padding-top: 36px;
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-wrap: wrap;
@@ -13,11 +12,12 @@
 }
 .contacts__title {
   @include title;
-  font-size: 23px;
-  line-height: 35px;
+  font-size: 24px;
+  line-height: 31px;
   font-weight: 300;
   padding: 0;
   margin: 0;
+  padding-bottom: 11px;
   @media (min-width: $tablet-widths) {
     padding-left: 150px;
     padding-right: 150px;
@@ -36,7 +36,7 @@
   margin: 0;
 }
 .contacts__item {
-  padding-top: 18px;
+  padding-top: 17px;
   @media (min-width: $tablet-widths) {
     width: 50%;
   }
@@ -67,7 +67,7 @@
 .contacts__email,
 .contacts__address {
   @include title;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 30px;
   font-weight: 300;
   text-decoration: none;
@@ -84,12 +84,12 @@
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 50px;
+  margin-top: 30px;
   background-position: center;
   width: 100%;
   @media (max-width: $mobile-widths) {
     background-image: url("/img/bg-map-mobile@1x.png");
-    height: 200px;
+    height: 210px;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("/img/bg-map-mobile@2x.jpg");
     }

@@ -47,7 +47,7 @@
   }
 }
 .intro__photo {
-  padding-top: 130px;
+  padding-top: 126px;
   padding-bottom: 270px;
   margin-top: 1px;
   position: relative;
@@ -105,7 +105,7 @@
 .intro__title {
   padding: 0;
   padding-top: 35px;
-  padding-bottom: 80px;
+  padding-bottom: 79px;
   margin: 0;
   text-align: center;
   @include title;
@@ -127,6 +127,7 @@
   }
 }
 .intro__title--index {
+  padding-bottom: 80px;
   display: none;
   @media (min-width: $tablet-widths) {
     display: block;
@@ -138,6 +139,9 @@
   }
   @media (min-width: $desktop-widths) {
   }
+}
+.intro__wrap {
+  display: block;
 }
 .intro__download-wrapper {
   @media (min-width: $tablet-widths) {
@@ -199,6 +203,8 @@
   background-color: #ffffff;
 }
 .intro__text {
+  @include text;
+  line-height: 23px;
   text-align: center;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
