@@ -5,7 +5,7 @@
   display: block;
   text-align: center;
   cursor: pointer;
-  padding-right: 30px;
+  padding-right: 42px;
   @media (min-width: $tablet-widths) {
     padding-right: 50px;
     display: flex;
@@ -16,11 +16,12 @@
   position: absolute;
   content: "";
   background-image: url("/img/htmlacademy.svg");
-  background-size: 35px 35px;
+  background-size: 35px 37px;
   background-repeat: no-repeat;
   width: 35px;
-  height: 35px;
+  height: 37px;
   top: -2px;
+  right: 92px;
   @media (min-width: $tablet-widths) {
     right: 5px;
   }

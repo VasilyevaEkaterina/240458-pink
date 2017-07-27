@@ -140,6 +140,12 @@
   @media (min-width: $desktop-widths) {
   }
 }
+.intro__title--form {
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
 .intro__wrap {
   display: block;
 }

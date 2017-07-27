@@ -1,28 +1,24 @@
 .photos__inner {
   @include container;
-  @media (min-width: $tablet-widths) {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
-.photos__text {
+.photos__title {
   @include text;
   line-height: 30px;
   text-align: center;
-  padding: 15px 35px;
+  padding: 30px;
+  padding-bottom: 28px;
   @media (min-width: $tablet-widths) {
     padding: 35px 100px;
     display: block;
-    width: 100%;
     font-size: 18px;
   }
   @media (min-width: $desktop-widths) {
     padding: 60px 240px;
   }
 }
-.photos__text--head {
+.photos__title--head {
   padding: 30px 35px;
-  padding-bottom: 36px;
+  padding-bottom: 34px;
   @media (min-width: $tablet-widths) {
     padding: 73px 100px;
     padding-bottom: 40px;
@@ -35,31 +31,44 @@
 .photos__mobile-wrap {
   display: block;
 }
+.photos__items {
+  display: flex;
+  flex-wrap: wrap;
+}
 .photos__item {
   padding-left: 20px;
   padding-right: 20px;
-}
-.photos__item--main {
-  padding: 0;
-  margin: 0;
-}
-.photos__photo {
-  margin-top: 18px;
-  margin-bottom: 18px;
-  width: 100%;
+  margin-bottom: 20px;
   @media (min-width: $tablet-widths) {
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    width: 46%;
+    padding-top: 2%;
+    padding-left: 2%;
   }
   @media (min-width: $desktop-widths) {
-    width: 33.333333%;
+    width: 30%;
   }
 }
 .photos__panorama {
   width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  position: relative;
 }
-.photos__photo:last-child {
-  margin-top: 0;
+.photos__panorama::before {
+  position: absolute;
+  content: "Панорама дня";
+  text-transform: uppercase;
+  background-color: $pink;
+  font-size: 13px;
+  color: #ffffff;
+  top: 0;
+  padding: 3px 18px;
+  right: 21px;
+  z-index: 4000;
+}
+.photos__item:last-child {
   margin-bottom: 0;
 }
 .photos__link {
@@ -68,44 +77,35 @@
   padding: 0;
   background-color: $bg-grey;
 }
-.photos__image {
+.photos__photo {
   display: block;
   width: 100%;
   padding: 0;
   margin: 0;
 }
-.photos__image--main {
-  position: relative;
+.photos__photo--main {
   padding: 0;
   margin: 0;
 }
-.photos__image--main::before {
-  position: absolute;
-  content: "Панорама дня";
-  text-transform: uppercase;
-  background-color: $pink;
-  color: #ffffff;
-  top: 0;
-  padding: 5px 15px;
-  right: 25px;
-  z-index: 1000;
-}
 .photos__content {
   background-color: $bg-grey;
-  padding: 18px 10px;
+  padding-top: 15px;
   padding-left: 17px;
+  padding-right: 12px;
+  padding-bottom: 16px;
   @media (min-width: $tablet-widths) {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
   }
 }
 .photos__content--main {
   margin-left: 20px;
   margin-right: 20px;
 }
-.photos__name-time {
+.photos__description{
   @media (min-width: $tablet-widths) {
-    width: 100%;
+    align-items: flex-start;
   }
 }
 .photos__name {
@@ -122,12 +122,12 @@
   font-weight: 300;
   text-transform: uppercase;
 }
-.photos__description {
+.photos__text {
   padding: 0;
   margin: 0;
   @include text;
-  line-height: 22px;
-  padding-bottom: 10px;
+  line-height: 24px;
+  padding-bottom: 8px;
 }
 .photos__likes {
   @include text;
@@ -138,8 +138,9 @@
   padding-left: 30px;
   @media (min-width: $tablet-widths) {
     padding-left: 0;
-    align-items: flex-end;
-    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-items: flex-start;
   }
 }
 .photos__likes::before {
@@ -157,7 +158,7 @@
     left: 95%;
   }
 }
-.photos__name-time--main {
+.photos__description--main {
   @media (min-width: $tablet-widths) {
     order: 1;
     width: 50%;
@@ -166,11 +167,10 @@
 .photos__likes--main {
   @media (min-width: $tablet-widths) {
     order: 2;
-    width: 50%;
-    text-align: right;
+    align-self: flex-end;
   }
 }
-.photos__description--main {
+.photos__text--main {
   @media (min-width: $tablet-widths) {
     order: 3;
   }

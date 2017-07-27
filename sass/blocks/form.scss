@@ -2,8 +2,11 @@
   @include container ;
 }
 .form__text {
+  @include text;
+  line-height: 31px;
   text-align: center;
   padding: 30px 20px;
+  padding-bottom: 0;
   @media (min-width: $tablet-widths) {
     padding: 60px 130px;
     display: block;
@@ -20,10 +23,14 @@
 }
 .form__block {
   padding: 20px;
-  padding-bottom: 40px;
+}
+.form__block--name {
+  padding-top: 20px;
+  padding-bottom: 23px;
 }
 .form__block--checkbox {
   background-color: $bg-grey;
+  padding-bottom: 45px;
   @media (min-width: $tablet-widths) {
     background-color: #ffffff;
     padding-left: 70px;
@@ -31,15 +38,23 @@
 }
 .form__block--radio {
   background-color: $bg-grey;
+  padding-top: 35px;
+  padding-bottom: 47px;
   @media (min-width: $tablet-widths) {
     background-color: #ffffff;
     padding-left: 70px;
   }
 }
 .form__block--contacts {
+  padding-top: 15px;
+  padding-bottom: 45px;
   @media (min-width: $desktop-widths) {
 
   }
+}
+.form__block--feedback {
+  padding-top: 38px;
+  padding-bottom: 40px;
 }
 .form__field {
   @media (min-width: $tablet-widths) {
@@ -47,14 +62,19 @@
   }
 }
 .form__field--checkbox {
-  padding-bottom: 50px;
-  padding-left: 80px;
+  padding-bottom: 54px;
+  padding-left: 70px;
 }
-.form__field--radio{
-  padding-left: 80px;
-  padding-bottom: 50px;
+.form__field--radio {
+  padding-left: 70px;
+  padding-bottom: 47px;
+}
+.form__field--checkbox:last-child,
+.form__field--radio:last-child {
+  padding-bottom: 0;
 }
 .form__field--name {
+  padding-bottom: 22px;
   @media (min-width: $tablet-widths) {
     display: flex;
     justify-content: space-between;
@@ -72,28 +92,58 @@
   }
 }
 .form__title {
+  @include text;
+  line-height: 20px;
   color: $pink;
   text-align: center;
   font-weight: 300;
   text-transform: uppercase;
-  padding-bottom: 30px;
+  padding: 0;
+  margin: 0;
+}
+.form__title--checkbox {
+  padding-top: 16px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 43px;
+}
+.form__title--contacts {
+  display: none;
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+}
+.form__title--radio {
+  padding-bottom: 38px;
+}
+.form__title--feedback {
+  padding-bottom: 15px;
 }
 .form__label {
   display: block;
-  text-transform: uppercase;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  @include text;
+  font-size: 14px;
+  text-transform: uppercase;
   @media (min-width: $tablet-widths) {
     display: inline-block;
     vertical-align: middle;
     padding-right: 20px;
   }
 }
-.form__label--name,
 .form__label--tel,
 .form__label--email {
   color: $pink;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   padding-top: 20px;
+  padding-left: 20px;
+}
+.form__label--name {
+  color: $pink;
+  padding-left: 20px;
+  padding-bottom: 6px;
 }
 .form__label--tel,
 .form__label--email {
@@ -101,10 +151,15 @@
     width: 100%;
   }
 }
+.form__label--checkbox,
+.form__label--radio {
+  text-transform: none;
+  font-size: 18px;
+}
 .form__input--name,
 .form__input--tel,
 .form__input--email {
-  width: 240px;
+  width: 235px;
   @media (min-width: $tablet-widths) {
     width: 90%;
     padding-left: 5%;
@@ -149,12 +204,12 @@
   position: absolute;
   display: block;
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 31px;
   background-color: #ffffff;
   border: 2px solid $light-grey;
   border-radius: 50%;
-  left: -70px;
+  left: -68px;
   top: 50%;
   transform: translateY(-50%);
   @media (min-width: $tablet-widths) {
@@ -171,8 +226,8 @@
   position: absolute;
   display: block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: $pink;
   border-radius: 50%;
   left: -58px;
@@ -196,7 +251,7 @@
   height: 35px;
   background-color: #ffffff;
   border: 2px solid $light-grey;
-  left: -70px;
+  left: -73px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -210,11 +265,10 @@
   position: absolute;
   display: block;
   content: "";
-  width: 17px;
-  height: 22px;
-  left: -58px;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 21px;
+  height: 27px;
+  left: -71px;
+  top: 7px;
   background-image: url("/img/icon-yes-pink.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -238,7 +292,7 @@
 .form__button {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   @media (min-width: $tablet-widths) {
     display: flex;
     justify-content: space-between;
@@ -258,7 +312,7 @@
   font-weight: 700;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   @media (min-width: $tablet-widths) {
     width: 50%;
   }
@@ -284,6 +338,9 @@
 }
 .form__required {
   display: block;
+  @include text;
+  text-transform: uppercase;
+  text-align: center;
   @media (min-width: $tablet-widths) {
     width: 50%;
     padding-left: 200px;
@@ -292,8 +349,16 @@
     padding-top: 20px;
   }
 }
-.form__tablet-hidden {
-  @media (min-width: $tablet-widths) {
-    display: none;
+.form__required--pink {
+  color: $pink;
+}
+.form__required--pink::after {
+  content:"\00A0\2014";
+  color: black;
+}
+.form__text-hidden {
+  display: none;
+  @media (min-width: $desktop-widths) {
+    display: block;
   }
 }

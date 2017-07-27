@@ -1,7 +1,7 @@
 .social-btns {
   display: flex;
   justify-content: center;
-  padding-bottom: 45px;
+  padding-bottom: 42px;
   cursor: pointer;
   @media (min-width: $tablet-widths) {
     justify-content: space-between;
@@ -12,13 +12,17 @@
 }
 .social-btns__btn {
   font-size: 0;
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 41px;
   border: 2px solid $bg-grey;
   background-color: none;
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
+  margin-right: 19px;
+}
+.social-btns__btn:last-child {
+  margin-right: 0;
 }
 .social-btns__btn:hover {
   border: 2px solid #000000;
@@ -28,7 +32,6 @@
 }
 .social-btns__btn--tw {
   position: relative;
-  margin-right: 10px
 }
 .social-btns__btn--tw::after {
   position: absolute;
@@ -44,7 +47,6 @@
 }
 .social-btns__btn--fb {
   position: relative;
-  margin-right: 10px;
 }
 .social-btns__btn--fb::after {
   position: absolute;
@@ -69,7 +71,6 @@
   background-repeat: no-repeat;
   width: 15px;
   height: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 30%;
+  left: 37%;
+  top: 33%;
 }
