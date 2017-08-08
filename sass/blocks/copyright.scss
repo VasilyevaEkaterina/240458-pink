@@ -7,9 +7,10 @@
   cursor: pointer;
   padding-right: 42px;
   @media (min-width: $tablet-widths) {
-    padding-right: 50px;
+    padding-right: 55px;
     display: flex;
     align-self: flex-end;
+    align-self: center;
   }
 }
 .copyright::after {
@@ -23,7 +24,10 @@
   top: -2px;
   right: 92px;
   @media (min-width: $tablet-widths) {
-    right: 5px;
+    right: 15px;
+    background-size: 39px 41px;
+    width: 39px;
+    height: 41px;
   }
 }
 .copyright:hover::after {

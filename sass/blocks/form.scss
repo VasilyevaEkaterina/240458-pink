@@ -49,7 +49,8 @@
   padding-top: 15px;
   padding-bottom: 45px;
   @media (min-width: $desktop-widths) {
-
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 .form__block--feedback {
@@ -88,6 +89,8 @@
     flex-wrap: wrap;
   }
   @media (min-width: $desktop-widths) {
+    flex-direction: row;
+    flex-wrap: nowrap;
     width: 50%;
   }
 }
@@ -111,6 +114,11 @@
   display: none;
   @media (min-width: $tablet-widths) {
     display: block;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 100%;
   }
 }
 .form__title--radio {
@@ -267,7 +275,7 @@
   content: "";
   width: 21px;
   height: 27px;
-  left: -71px;
+  left: -64px;
   top: 7px;
   background-image: url("/img/icon-yes-pink.svg");
   background-repeat: no-repeat;

@@ -21,7 +21,7 @@
   padding-bottom: 34px;
   @media (min-width: $tablet-widths) {
     padding: 73px 100px;
-    padding-bottom: 40px;
+    padding-bottom: 57px;
     font-size: 18px;
   }
   @media (min-width: $desktop-widths) {
@@ -42,9 +42,10 @@
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-direction: column;
-    width: 46%;
-    padding-top: 2%;
-    padding-left: 2%;
+    padding: 0;
+    width: 300px;
+    padding-top: 20px;
+    padding-left: 20px;
   }
   @media (min-width: $desktop-widths) {
     width: 30%;
@@ -63,13 +64,13 @@
   background-color: $pink;
   font-size: 13px;
   color: #ffffff;
-  top: 0;
+  top: 5px;
   padding: 3px 18px;
   right: 21px;
   z-index: 4000;
-}
-.photos__item:last-child {
-  margin-bottom: 0;
+  @media (min-width: $tablet-widths) {
+    top: 60px;
+  }
 }
 .photos__link {
   text-align: center;
@@ -93,19 +94,53 @@
   padding-left: 17px;
   padding-right: 12px;
   padding-bottom: 16px;
+  @include text;
   @media (min-width: $tablet-widths) {
     display: flex;
+    font-weight: 300;
     flex-direction: column;
     flex-grow: 1;
+    padding-top: 20px;
+    padding-left: 28px;
   }
 }
 .photos__content--main {
   margin-left: 20px;
   margin-right: 20px;
 }
-.photos__description{
+.photos__description {
   @media (min-width: $tablet-widths) {
     align-items: flex-start;
+  }
+}
+.photos__description--main {
+  @media (min-width: $tablet-widths) {
+    position: relative;
+  }
+}
+.photos__description--main::after {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    content: "нравится: 215";
+    text-transform: uppercase;
+    color: $pink;
+    right: 50px;
+    top: 0;
+    font-size: 12px;
+    line-height: 28px;
+  }
+}
+.photos__description--main::before {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-heart.svg");
+    background-size: 12px 13px;
+    width: 12px;
+    height: 13px;
+    top: 7px;
+    right: 18px;
+    z-index: 10000;
   }
 }
 .photos__name {
@@ -158,20 +193,8 @@
     left: 95%;
   }
 }
-.photos__description--main {
-  @media (min-width: $tablet-widths) {
-    order: 1;
-    width: 50%;
-  }
-}
 .photos__likes--main {
   @media (min-width: $tablet-widths) {
-    order: 2;
-    align-self: flex-end;
-  }
-}
-.photos__text--main {
-  @media (min-width: $tablet-widths) {
-    order: 3;
+    display: none;
   }
 }

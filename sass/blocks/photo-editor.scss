@@ -8,6 +8,10 @@
     justify-content: space-between;
     padding-top: 60px;
   }
+  @media (min-width: $desktop-widths) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 .photo-editor__photo {
   display: block;

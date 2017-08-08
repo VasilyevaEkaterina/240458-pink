@@ -23,7 +23,7 @@
   font-size: 0;
   z-index: 3;
   right: 20px;
-  top: 25px;
+  top: 45px;
   border: none;
   background: none;
   outline: none;
@@ -34,7 +34,7 @@
     background-image: url("/img/icon-menu-burger.svg");
   }
   @media (min-width: $tablet-widths) {
-    display: none;
+
   }
   @media (min-width: $desktop-widths) {
     display: none;
