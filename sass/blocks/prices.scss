@@ -60,7 +60,6 @@
   padding: 15px 25px;
   @media (min-width: $tablet-widths) {
     padding: 8px 0;
-    padding-left: 15px;
   }
 }
 .prices__column--header {
@@ -94,6 +93,10 @@
 }
 .prices__column--title {
   text-align: left;
+  @media (min-width: $tablet-widths) {
+    display: block;
+    padding-left: 10px;
+  }
 }
 .prices__column--mobile {
   text-align: left;

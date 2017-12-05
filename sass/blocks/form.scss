@@ -1,11 +1,16 @@
 .form__inner {
-  @include container ;
+  @include container;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .form__text {
   @include text;
   line-height: 31px;
   text-align: center;
   padding: 30px 20px;
+  padding-top: 35px;
   padding-bottom: 0;
   @media (min-width: $tablet-widths) {
     padding: 60px 130px;
@@ -23,18 +28,53 @@
 }
 .form__block {
   padding: 20px;
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+  }
 }
+
+.form__fields-wrap {
+  @media (min-width: $tablet-widths) {
+    background-color: #ffffff;
+    order: 2;
+    border: 2px solid $light-grey;
+    padding: 50px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 87%;
+  }
+}
+
+.form__fields-wrap--checkbox {
+  @media (min-width: $desktop-widths) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .form__block--name {
   padding-top: 20px;
   padding-bottom: 23px;
+  @media (min-width: $tablet-widths) {
+    order: 1;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 45%;
+  }
 }
 .form__block--checkbox {
   background-color: $bg-grey;
   padding-bottom: 45px;
   @media (min-width: $tablet-widths) {
     background-color: #ffffff;
-    padding-left: 70px;
+    order: 4;
+    position: relative;
   }
+  @media (min-width: $desktop-widths) {
+
+  }
+
 }
 .form__block--radio {
   background-color: $bg-grey;
@@ -42,12 +82,22 @@
   padding-bottom: 47px;
   @media (min-width: $tablet-widths) {
     background-color: #ffffff;
-    padding-left: 70px;
+    order: 2;
+    position: relative;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 39%;
+    padding-top: 7px;
   }
 }
+
 .form__block--contacts {
-  padding-top: 15px;
-  padding-bottom: 45px;
+  padding-top: 25px;
+  padding-bottom: 32px;
+  @media (min-width: $tablet-widths) {
+    order: 3;
+    position: relative;
+  }
   @media (min-width: $desktop-widths) {
     display: flex;
     flex-wrap: wrap;
@@ -56,6 +106,10 @@
 .form__block--feedback {
   padding-top: 38px;
   padding-bottom: 40px;
+  @media (min-width: $tablet-widths) {
+    order: 5;
+    position: relative;
+  }
 }
 .form__field {
   @media (min-width: $tablet-widths) {
@@ -65,6 +119,9 @@
 .form__field--checkbox {
   padding-bottom: 54px;
   padding-left: 70px;
+  @media (min-width: $desktop-widths) {
+    width: 20%;
+  }
 }
 .form__field--radio {
   padding-left: 70px;
@@ -80,20 +137,28 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
   }
 }
 .form__field--tel,
 .form__field--email {
+  padding-bottom: 10px;
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-wrap: wrap;
   }
   @media (min-width: $desktop-widths) {
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: 50%;
+    width: 100%;
   }
 }
+
+.form__field--email {
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 0;
+  }
+}
+
 .form__title {
   @include text;
   line-height: 20px;
@@ -109,23 +174,58 @@
   padding-left: 28px;
   padding-right: 28px;
   padding-bottom: 43px;
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    top: -5px;
+    left: 20%;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    left: 30%;
+  }
 }
 .form__title--contacts {
   display: none;
   @media (min-width: $tablet-widths) {
     display: block;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    position: absolute;
+    top: 5px;
+    left: 35%;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @media (min-width: $desktop-widths) {
-    width: 100%;
+    left: 38%;
   }
 }
 .form__title--radio {
   padding-bottom: 38px;
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    top: 25px;
+    left: 25%;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    left: 15%;
+    top: 0;
+  }
 }
 .form__title--feedback {
   padding-bottom: 15px;
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    top: 25px;
+    left: 33%;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .form__label {
   display: block;
@@ -145,7 +245,7 @@
 .form__label--email {
   color: $pink;
   padding-bottom: 8px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 20px;
 }
 .form__label--name {
@@ -169,23 +269,50 @@
 .form__input--email {
   width: 235px;
   @media (min-width: $tablet-widths) {
-    width: 90%;
+    width: 77.3%;
     padding-left: 5%;
     padding-right: 5%;
   }
 }
-.form__input--name {
+
+.form__contact {
+  width: 100%;
   @media (min-width: $tablet-widths) {
-    width: 80%;
-  }
-}
-.form__contact--tel,
-.form__contact--email {
-  @media (min-width: $tablet-widths) {
-    width: 100%;
+    position: relative;
     order: -1;
   }
 }
+.form__icon {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-color: $light-grey;
+    background-size: 53px 53px;
+    width: 12%;
+    height: 100%;
+  }
+}
+.form__icon--tel {
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/icon-phone.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
+  }
+}
+.form__icon--email {
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/icon-mail.svg");
+    background-size: 20px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+  }
+}
+
 .form__input {
   font-family: "Open Sans", "Arial", sans-serif;
   outline: none;
@@ -291,10 +418,11 @@
   border: 2px solid $light-grey;
   min-height: 200px;
   @media (min-width: $tablet-widths) {
-    width: 620px;
+    width: 100%;
+    position: relative;
   }
   @media (min-width: $desktop-widths) {
-    width: 920px;
+
   }
 }
 .form__button {
@@ -303,7 +431,9 @@
   margin-bottom: 15px;
   @media (min-width: $tablet-widths) {
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    order: 6;
   }
 }
 .form__btn {
@@ -351,7 +481,6 @@
   text-align: center;
   @media (min-width: $tablet-widths) {
     width: 50%;
-    padding-left: 200px;
     text-align: right;
     text-transform: uppercase;
     padding-top: 20px;
@@ -367,6 +496,7 @@
 .form__text-hidden {
   display: none;
   @media (min-width: $desktop-widths) {
-    display: block;
+    display: inline-block;
+    padding-right: 5px;
   }
 }

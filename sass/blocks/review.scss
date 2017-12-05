@@ -5,12 +5,17 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 23px;
+  @media (min-width: $tablet-widths) {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
 }
 .review__slide {
   text-align: center;
   padding: 36px 20px;
-  padding-bottom: 0;
+  padding-bottom: 30px;
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-wrap: wrap;

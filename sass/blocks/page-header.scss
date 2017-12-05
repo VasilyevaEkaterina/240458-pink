@@ -14,29 +14,62 @@
   @include container;
   position: relative;
 }
-.page-header__toggle {
-  position: absolute;
+
+.page-header__mobile-wrap {
   display: block;
+  padding: 30px;
+  padding-bottom: 40px;
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 80px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 0;
+  }
+}
+
+.page-header__logo {
+  left: 0;
+  top: 0;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  left: 20px;
+  top: 20px;
+  @media (min-width: $tablet-widths) {
+    top: 25px;
+    z-index: 1000;
+  }
+}
+
+.page-header__toggle {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
   height: 22px;
   width: 22px;
   font-size: 0;
-  z-index: 3;
-  right: 20px;
-  top: 45px;
   border: none;
   background: none;
   outline: none;
-  background-image: url("/img/icon-menu-cross.svg");
   background-size: 22px 22px;
   background-repeat: no-repeat;
-  &--closed {
-    background-image: url("/img/icon-menu-burger.svg");
-  }
   @media (min-width: $tablet-widths) {
-
+    top: 45px;
   }
   @media (min-width: $desktop-widths) {
     display: none;
   }
+}
+
+.page-header__toggle--nojs {
+  display: none;
+}
+
+.page-header__toggle--opened {
+  background-image: url("/img/icon-menu-cross.svg");
+}
+.page-header__toggle--closed {
+  background-image: url("/img/icon-menu-burger.svg");
 }

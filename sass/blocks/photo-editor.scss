@@ -1,7 +1,7 @@
 .photo-editor__inner {
   background-color: $bg-grey;
   @include container;
-  padding-top: 12px;
+  padding-top: 16px;
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-wrap: wrap;

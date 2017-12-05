@@ -171,14 +171,20 @@
 .intro__stores {
   display: inline-block;
   text-align: center;
-  padding-top: 45px;
+  padding-top: 35px;
   padding-left: 40px;
+  @media (min-width: $tablet-widths) {
+    padding-top: 45px;
+  }
   @media (min-width: $tablet-widths) {
     padding-left: 64px;
   }
 }
 .intro__store {
-  padding-right: 35px;
+  padding-right: 30px;
+  @media (min-width: $tablet-widths) {
+    padding-right: 38px;
+  }
 }
 .intro__store:last-child {
   padding-right: 0;

@@ -13,18 +13,18 @@
   <body>
     <header class="page-header">
       <div class="page-header__inner">
-        <button class="page-header__toggle" type="button">Открыть меню</button>
-        <nav class="main-nav">
+        <div class="page-header__mobile-wrap">
+          <a href="#" class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="/img/logo-pink-white-tablet.svg">
+              <img class="page-header__logo-icon" src="/img/logo-pink-white-mobile.svg" alt="logo">
+            </picture>
+          </a>
+          <button class="page-header__toggle page-header__toggle--nojs" type="button">Открыть меню</button>
+        </div>
+        <nav class="main-nav main-nav--nojs main-nav--closed">
           <ul class="main-nav__items">
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
-                  <source media="(min-width: 660px)" srcset="/img/logo-pink-white-tablet.svg">
-                  <img class="main-nav__logo" src="/img/logo-pink-white-mobile.svg" alt="logo">
-                </picture>
-              </a>
-            </li>
             <li class="main-nav__item main-nav__item--active">
               <a class="main-nav__link">Главная</a>
             </li>
@@ -168,7 +168,7 @@
               </ul>
             </div>
           </div>
-          <div class="prices__controls">
+          <form class="prices__controls">
             <div class="prices__btn prices__btn--prev">
               <input type="radio" class="prices__input" id="prices__btn-1" name="prices-btn">
               <label for="prices__btn-1" class="prices__label"></label>
@@ -181,7 +181,7 @@
               <input type="radio" class="prices__input" id="prices__btn-3" name="prices-btn">
               <label for="prices__btn-3" class="prices__label"></label>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="contacts">
@@ -202,9 +202,7 @@
             <div class="contacts__address">ул. Большая Конюшенная, 19/8</div>
           </div>
         </div>
-        <div class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651577!2d30.32089461612247!3d59.93879418187626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1498735819534"></iframe>
-        </div>
+        <div class="contacts__map" id="map"></div>
       </div>
     </main>
     <footer class="page-footer">
@@ -218,5 +216,9 @@
         <a href="#" class="copyright">Разработано</a>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/price-slider.js"></script>
+    <script src="js/map.js" defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDMUQ0YT8U-cKOHsMqQ55SFXQ3lcE0WB8&callback=initMap"></script>
   </body>
 </html>

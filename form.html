@@ -13,25 +13,32 @@
   <body>
     <header class="page-header">
       <div class="page-header__inner">
-        <button class="page-header__toggle" type="button">Открыть меню</button>
-        <nav class="main-nav">
+        <div class="page-header__mobile-wrap">
+          <a href="#" class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="/img/logo-pink-white-tablet.svg">
+              <img class="page-header__logo-icon" src="/img/logo-pink-white-mobile.svg" alt="logo">
+            </picture>
+          </a>
+          <button class="page-header__toggle page-header__toggle--nojs" type="button">Открыть меню</button>
+        </div>
+        <nav class="main-nav main-nav--nojs main-nav--closed">
           <ul class="main-nav__items">
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
-                  <source media="(min-width: 660px)" srcset="/img/logo-pink-white-tablet.svg">
-                  <img class="main-nav__logo" src="/img/logo-pink-white-mobile.svg" alt="logo">
-                </picture>
-              </a>
+              <a href="/index.html" class="main-nav__link">Главная</a>
             </li>
-            <li class="main-nav__item"><a href="/index.html" class="main-nav__link">Главная</a></li>
-            <li class="main-nav__item"><a href="/photo.html" class="main-nav__link">Фотографии</a></li>
-            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Конкурс</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">HTML Academy</a></li>
+            <li class="main-nav__item">
+              <a href="/photo.html" class="main-nav__link">Фотографии</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">HTML Academy</a>
+            </li>
           </ul>
         </nav>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
         <div class="intro intro--mobile">
           <h1 class="intro__title intro__title--form">Конкурс на самое безбашенное <span class="intro__wrap">путешествие с Пинк</span></h1>
         </div>
@@ -57,7 +64,7 @@
           </div>
           <div class="form__block form__block--checkbox">
             <h2 class="form__title form__title--checkbox">Ваши безбашенные достижения в путешествии</h2>
-            <div class="form__checkbox">
+            <div class="form__fields-wrap form__fields-wrap--checkbox">
               <div class="form__field form__field--checkbox">
                 <input type="checkbox" name="check-1" id="check-1" checked class="form__input form__input--checkbox">
                 <label for="check-1" class="form__label form__label--checkbox">Сделал селфи с акулой</label>
@@ -86,39 +93,45 @@
           </div>
           <div class="form__block form__block--contacts">
             <h2 class="form__title form__title--contacts">Контактная информация</h2>
-            <div class="form__field form__field--tel">
-              <label for="tel" class="form__label form__label--tel">Номер телефона</label>
-              <div class="form__contact form__contact--tel">
-                <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{3}" class="form__input form__input--tel">
-                <div class="form__icon form__icon--tel"></div>
+            <div class="form__fields-wrap">
+              <div class="form__field form__field--tel">
+                <label for="tel" class="form__label form__label--tel">Номер телефона</label>
+                <div class="form__contact form__contact--tel">
+                  <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{3}" class="form__input form__input--tel">
+                  <div class="form__icon form__icon--tel"></div>
+                </div>
               </div>
-            </div>
-            <div class="form__field form__field--email">
-              <label for="email" class="form__label form__label--email">Адрес почты</label>
-              <div class="form__contact form__contact--email">
-                <input type="email" name="email" id="email" placeholder="Введите почту *" required class="form__input form__input--email">
-                <div class="form__icon form__icon--email"></div>
+              <div class="form__field form__field--email">
+                <label for="email" class="form__label form__label--email">Адрес почты</label>
+                <div class="form__contact form__contact--email">
+                  <input type="email" name="email" id="email" placeholder="Введите почту *" required class="form__input form__input--email">
+                  <div class="form__icon form__icon--email"></div>
+                </div>
               </div>
             </div>
           </div>
           <div class="form__block form__block--radio">
-            <h2 class="form__title form__title--radio">С каким приложением путешествовали?</h2>
-            <div class="form__field form__field--radio">
-              <input type="radio" name="radio" value="ios" id="ios" checked class="form__input form__input--radio">
-              <label for="ios" class="form__label form__label--radio">Pink для iOS</label>
-            </div>
-            <div class="form__field form__field--radio">
-              <input type="radio" name="radio" value="android" id="android" class="form__input form__input--radio">
-              <label for="android" class="form__label form__label--radio">Pink на Android</label>
-            </div>
-            <div class="form__field form__field--radio">
-              <input type="radio" name="radio" value="windows" id="windows" class="form__input form__input--radio">
-              <label for="windows" class="form__label form__label--radio">Windows Phone</label>
+            <div class="form__fields-wrap">
+              <h2 class="form__title form__title--radio">С каким приложением путешествовали?</h2>
+              <div class="form__field form__field--radio">
+                <input type="radio" name="radio" value="ios" id="ios" checked class="form__input form__input--radio">
+                <label for="ios" class="form__label form__label--radio">Pink для iOS</label>
+              </div>
+              <div class="form__field form__field--radio">
+                <input type="radio" name="radio" value="android" id="android" class="form__input form__input--radio">
+                <label for="android" class="form__label form__label--radio">Pink на Android</label>
+              </div>
+              <div class="form__field form__field--radio">
+                <input type="radio" name="radio" value="windows" id="windows" class="form__input form__input--radio">
+                <label for="windows" class="form__label form__label--radio">Windows Phone</label>
+              </div>
             </div>
           </div>
           <div class="form__block form__block--feedback">
             <h2 class="form__title form__title--feedback">Опишите свои эмоции</h2>
-            <textarea name="feedback" id="feedback" class="form__feedback" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <div class="form__fields-wrap">
+              <textarea name="feedback" id="feedback" class="form__feedback" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
           </div>
           <div class="form__button">
             <button type="submit" class="form__btn">Отправить форму</button>
@@ -138,5 +151,7 @@
         <a href="#" class="copyright">Разработано</a>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>
