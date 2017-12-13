@@ -19,10 +19,19 @@
     padding-bottom: 44px;
   }
   @media (min-width: $desktop-widths) {
-    padding-left: 250px;
-    padding-right: 250px;
+    font-size: 50px;
+    line-height: 59px;
+    padding-top: 65px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
+.promo__title--index {
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 75px;
+  }
+}
+
 .promo__mobile-wrap {
   display: block;
   padding: 0;

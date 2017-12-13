@@ -18,14 +18,14 @@
   }
 }
 .page-footer__logo {
-  display: flex;
-  flex-basis: 100%;
+  display: block;
   position: relative;
   padding-bottom: 85px;
-  justify-content: center;
   cursor: pointer;
   @media (min-width: $tablet-widths) {
+    display: flex;
     align-self: flex-start;
+    justify-content: center;
     width: 147px;
     padding: 0;
     flex-basis: auto;
@@ -40,6 +40,11 @@
   width: 147px;
   height: 41px;
   background-size: 147px 41px;
+  top: 0;
+  left: 27%;
+  @media (min-width: $tablet-widths) {
+    left: 15%;
+  }
   @media (min-width: $desktop-widths) {
     background-image: url("/img/logo-pink-blue-desktop.svg");
   }

@@ -14,9 +14,9 @@
     <header class="page-header">
       <div class="page-header__inner">
         <div class="page-header__mobile-wrap">
-          <a href="#" class="page-header__logo">
+          <a href="/index.html" class="page-header__logo">
             <picture>
-              <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 960px)" srcset="/img/logo-pink-white-desktop.svg">
               <source media="(min-width: 660px)" srcset="/img/logo-pink-white-tablet.svg">
               <img class="page-header__logo-icon" src="/img/logo-pink-white-mobile.svg" alt="logo">
             </picture>
@@ -93,7 +93,7 @@
           </div>
           <div class="form__block form__block--contacts">
             <h2 class="form__title form__title--contacts">Контактная информация</h2>
-            <div class="form__fields-wrap">
+            <div class="form__fields-wrap form__fields-wrap--contacts">
               <div class="form__field form__field--tel">
                 <label for="tel" class="form__label form__label--tel">Номер телефона</label>
                 <div class="form__contact form__contact--tel">
@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="form__block form__block--radio">
-            <div class="form__fields-wrap">
+            <div class="form__fields-wrap form__fields-wrap--radio">
               <h2 class="form__title form__title--radio">С каким приложением путешествовали?</h2>
               <div class="form__field form__field--radio">
                 <input type="radio" name="radio" value="ios" id="ios" checked class="form__input form__input--radio">
@@ -129,7 +129,7 @@
           </div>
           <div class="form__block form__block--feedback">
             <h2 class="form__title form__title--feedback">Опишите свои эмоции</h2>
-            <div class="form__fields-wrap">
+            <div class="form__fields-wrap form__fields-wrap--feedback">
               <textarea name="feedback" id="feedback" class="form__feedback" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </div>
@@ -139,10 +139,22 @@
           </div>
         </div>
       </form>
+      <div class="popup popup--decline">
+        <h2 class="popup__title">Что-то пошло не так!</h2>
+        <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button tabindex="0" class="popup__btn popup__btn--decline" type="button">Ок</button>
+      </div>
+      <div class="popup popup--accept">
+        <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+        <p class="popup__text popup__text--accept">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <div class="popup__button">
+          <button tabindex="0" class="popup__btn popup__btn--accept" type="button">Закрыть окно</button>
+        </div>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__inner">
-        <a class="page-footer__logo"></a>
+        <a href="/index.html" class="page-footer__logo"></a>
         <div class="social-btns">
           <a href="#" class="social-btns__btn social-btns__btn--tw">tw</a>
           <a href="#" class="social-btns__btn social-btns__btn--fb">fb</a>

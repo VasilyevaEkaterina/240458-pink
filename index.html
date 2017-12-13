@@ -16,7 +16,7 @@
         <div class="page-header__mobile-wrap">
           <a href="#" class="page-header__logo">
             <picture>
-              <source media="(min-width: 1200px)" srcset="/img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 960px)" srcset="/img/logo-pink-white-desktop.svg">
               <source media="(min-width: 660px)" srcset="/img/logo-pink-white-tablet.svg">
               <img class="page-header__logo-icon" src="/img/logo-pink-white-mobile.svg" alt="logo">
             </picture>
@@ -95,35 +95,52 @@
       </div>
       <div class="research">
         <div class="research__inner">
-          <h2 class="research__title">Эффект <span class="research__tablet-wrap">на 24 часа!</span></h2>
-          <p class="research__text">Британские ученые провели исследование и доказали, что положительный эффект <span class="research__tablet-wrap">от использования приложения длится</span> целые сутки!</p>
-          <a class="research__link" href="#">Узнать больше об исследовании</a>
+          <div class="research__image"></div>
+          <div class="research__content">
+            <h2 class="research__title">Эффект <span class="research__tablet-wrap">на 24 часа!</span></h2>
+            <p class="research__text">Британские ученые провели исследование и доказали, что положительный эффект <span class="research__tablet-wrap">от использования приложения длится</span> целые сутки!</p>
+            <a class="research__link" href="#">Узнать больше об исследовании</a>
+          </div>
         </div>
       </div>
       <div class="review">
         <div class="review__inner">
           <div class="review__slider">
             <div class="review__slide-list">
-              <div class="review__slide">
+              <div class="review__slide review__slide--prev review__slide--hidden">
                 <span class="review__details">25 лет, водитель трамвая</span>
                 <h3 class="review__name">Николай Петров</h3>
                 <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
               </div>
+              <div class="review__slide review__slide--active">
+                <span class="review__details">35 лет, водитель трамвая</span>
+                <h3 class="review__name">Николай Петров</h3>
+                <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </div>
+              <div class="review__slide review__slide--next review__slide--hidden">
+                <span class="review__details">45 лет, водитель трамвая</span>
+                <h3 class="review__name">Николай Петров</h3>
+                <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </div>
             </div>
-            <div class="review__slider-controls">
+            <div class="review__arrow-btns">
+              <button type="button" class="review__arrow review__arrow--prev"></button>
+              <button type="button" class="review__arrow review__arrow--next"></button>
+            </div>
+            <form class="review__slider-controls">
               <div class="review__slider-btn review__slider-btn--prev">
-                <input type="radio" class="review__input" id="review__btn-1" name="slider-btn" checked>
+                <input type="radio" class="review__input review__input--prev" id="review__btn-1" name="slider-btn">
                 <label for="review__btn-1" class="review__label"></label>
               </div>
               <div class="review__slider-btn review__slider-btn--active">
-                <input type="radio" class="review__input" id="review__btn-2" name="slider-btn">
+                <input type="radio" class="review__input review__input--active" id="review__btn-2" name="slider-btn" checked>
                 <label for="review__btn-2" class="review__label"></label>
               </div>
               <div class="review__slider-btn review__slider-btn--next">
-                <input type="radio" class="review__input" id="review__btn-3" name="slider-btn">
+                <input type="radio" class="review__input review__input--next" id="review__btn-3" name="slider-btn">
                 <label for="review__btn-3" class="review__label"></label>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -217,7 +234,7 @@
       </div>
     </footer>
     <script src="js/mobile-menu.js"></script>
-    <script src="js/price-slider.js"></script>
+    <script src="js/review-slider.js"></script>
     <script src="js/map.js" defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDMUQ0YT8U-cKOHsMqQ55SFXQ3lcE0WB8&callback=initMap"></script>
   </body>

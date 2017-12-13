@@ -1,16 +1,17 @@
 .photo-editor__inner {
   background-color: $bg-grey;
   @include container;
-  padding-top: 16px;
+  padding-top: 28px;
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 75px;
+    padding-bottom: 15px;
   }
   @media (min-width: $desktop-widths) {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
   }
 }
 .photo-editor__photo {
@@ -19,16 +20,19 @@
   padding-top: 5px;
   padding-bottom: 20px;
   @media (min-width: $tablet-widths) {
-    width: 50%;
+    width: 48%;
     padding: 0;
+    padding-left: 2%;
   }
 }
 .photo-editor__tools {
   padding-top: 95px;
   cursor: pointer;
   @media (min-width: $tablet-widths) {
-    width: 50%;
-    padding-top: 10px;
+    width: 44%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
   }
 }
 .photo-editor__settings {
@@ -40,6 +44,10 @@
   border-bottom: 1px solid $light-grey;
   @media (min-width: $tablet-widths) {
     flex-wrap: wrap;
+    padding-left: 70px;
+  }
+  @media (min-width: $desktop-widths) {
+      border-bottom: 0;
   }
 }
 .photo-editor__toggle {
@@ -51,8 +59,11 @@
   width: 240px;
   height: 2px;
   background-color: #000000;
+  @media (min-width: $tablet-widths) {
+    width: 205px;
+  }
   @media (min-width: $desktop-widths) {
-    width: 350px;
+    width: 300px;
   }
 }
 .photo-editor__toggle--crop {
@@ -68,7 +79,7 @@
   background-color: $bg-grey;
   border-radius: 50%;
   top: -23px;
-  left: 192px;
+  left: 145px;
 }
 .photo-editor__toggle--fill {
   position: relative;
@@ -83,7 +94,7 @@
   background-color: $bg-grey;
   border-radius: 50%;
   top: -23px;
-  left: 40px;
+  left: 25px;
 }
 .photo-editor__toggle--contrast {
   position: relative;
@@ -98,7 +109,7 @@
   background-color: $bg-grey;
   border-radius: 50%;
   top: -23px;
-  left: 120px;
+  left: 95px;
 }
 .photo-editor__toggle:active::after {
   background-color: $pink;
@@ -120,7 +131,7 @@
   @media (min-width: $tablet-widths) {
     border-bottom: 1px solid $light-grey;
     padding-bottom: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 }
 .photo-editor__crop::before {
@@ -138,7 +149,12 @@
     height: 28px;
     background-size: 28px 28px;
     bottom: 18px;
-    left: -40px;
+    left: -55px;
+  }
+  @media (min-width: $desktop-widths) {
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
   }
 }
 .photo-editor__crop:hover::before {
@@ -157,6 +173,17 @@
   left: 14px;
   bottom: 40px;
   opacity: 1;
+  @media (min-width: $tablet-widths) {
+    width: 28px;
+    height: 28px;
+    background-size: 28px 28px;
+  }
+  @media (min-width: $desktop-widths) {
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    left: -90px;
+  }
 }
 .photo-editor__fill {
   position: relative;
@@ -182,8 +209,14 @@
     height: 28px;
     background-size: 28px 28px;
     bottom: 18px;
-    left: -40px;
+    left: -55px;
     opacity: 1;
+  }
+  @media (min-width: $desktop-widths) {
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    left: -90px;
   }
 }
 .photo-editor__fill:hover::before {
@@ -213,7 +246,14 @@
     height: 20px;
     background-size: 20px 20px;
     bottom: 30px;
-    left: -37px;
+    left: -50px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    left: -90px;
   }
 }
 .photo-editor__contrast:hover::before {
@@ -223,10 +263,19 @@
   padding: 30px 20px;
   padding-top: 37px;
   padding-bottom: 38px;
+  @media (min-width: $tablet-widths) {
+    width: 92%;
+    padding-left: 5%;
+    padding-top: 10%;
+  }
   @media (min-width: $desktop-widths) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    flex-basis: 100%;
+    padding: 0;
+    padding-top: 25%;
   }
 }
 .photo-editor__post {
@@ -245,6 +294,14 @@
   padding: 15px 20px;
   border-radius: 40px;
   background-color: $bg-grey;
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+    margin-bottom: 8%;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 45%;
+    margin-bottom: 0;
+  }
 }
 .photo-editor__post:hover {
   color: #ffffff;
@@ -272,9 +329,12 @@
   background-color: $bg-grey;
   margin-top: 10px;
   opacity: 0.5;
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+  }
   @media (min-width: $desktop-widths) {
+    width: 45%;
     margin: 0;
-    margin-left: 20px;
   }
 }
 .photo-editor__cancel:hover {
