@@ -94,6 +94,61 @@
   color: $bg-grey;
 }
 .contacts__map {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  background-position: center;
+  width: 100%;
+  @media (max-width: $mobile-widths) {
+    background-image: url("/img/bg-map-mobile@1x.png");
+    height: 210px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-map-mobile@2x.jpg");
+    }
+  }
+  @media (min-width: $tablet-widths) {
+    margin-top: 10px;
+    background-image: url("/img/bg-map-tablet@1x.jpg");
+    height: 390px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-map-tablet@2x.jpg");
+    }
+  }
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 100px;
+    background-image: url("/img/bg-map-desktop@1x.jpg");
+    height: 400px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-map-desktop@2x.jpg");
+    }
+  }
+}
+.contacts__map--hidden {
+  visibility: hidden;
+}
+
+.contacts__map-pin {
+  content: "";
+  position: absolute;
+  background-image: url("/img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  z-index: 1000;
+  top: 20%;
+  left: 20%;
+  @media (min-width: $tablet-widths) {
+    top: 75%;
+    left: 50%;
+  }
+  @media (min-width: $desktop-widths) {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.contacts__map-wrapper {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -124,13 +179,8 @@
     }
   }
 }
-// .contacts__map iframe {
-//   width: 100%;
-//   height: 100%;
-//   background-size: cover;
-//   border: none;
-// }
-.contacts__map::after {
+
+.contacts__map-wrapper::after {
   position: absolute;
   content: "";
   background-image: url("/img/bg-triangle-white-footer.svg");
@@ -142,7 +192,7 @@
   left: -2%;
   right: 2%;
 }
-.contacts__map::before {
+.contacts__map-wrapper::before {
   position: absolute;
   content: "";
   background-image: url("/img/bg-triangle-white-footer.svg");

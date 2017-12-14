@@ -52,8 +52,11 @@
 }
 .photo-editor__toggle {
   outline: none;
-  border: none;
+  border: 0;
   background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 .photo-editor__bar {
   width: 240px;
@@ -66,49 +69,43 @@
     width: 300px;
   }
 }
-.photo-editor__toggle--crop {
+.photo-editor__bar--crop {
   position: relative;
 }
-.photo-editor__toggle--crop::after {
-  cursor: pointer;
+.photo-editor__toggle--crop {
   position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border: 2px solid $pink;
   background-color: $bg-grey;
   border-radius: 50%;
-  top: -23px;
+  top: -6px;
   left: 145px;
 }
-.photo-editor__toggle--fill {
+.photo-editor__bar--fill {
   position: relative;
 }
-.photo-editor__toggle--fill::after {
-  cursor: pointer;
+.photo-editor__toggle--fill {
   position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border: 2px solid $pink;
   background-color: $bg-grey;
   border-radius: 50%;
-  top: -23px;
+  top: -6px;
   left: 25px;
 }
-.photo-editor__toggle--contrast {
+.photo-editor__bar--contrast {
   position: relative;
 }
-.photo-editor__toggle--contrast::after {
-  cursor: pointer;
+.photo-editor__toggle--contrast {
   position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border: 2px solid $pink;
   background-color: $bg-grey;
   border-radius: 50%;
-  top: -23px;
+  top: -6px;
   left: 95px;
 }
 .photo-editor__toggle:active::after {

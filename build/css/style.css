@@ -139,6 +139,28 @@
   color: #F2F2F2; }
 
 .contacts__map {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  background-position: center;
+  width: 100%; }
+
+.contacts__map--hidden {
+  visibility: hidden; }
+
+.contacts__map-pin {
+  content: "";
+  position: absolute;
+  background-image: url("/img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  z-index: 1000;
+  top: 20%;
+  left: 20%; }
+
+.contacts__map-wrapper {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +168,7 @@
   background-position: center;
   width: 100%; }
 
-.contacts__map::after {
+.contacts__map-wrapper::after {
   position: absolute;
   content: "";
   background-image: url("/img/bg-triangle-white-footer.svg");
@@ -158,7 +180,7 @@
   left: -2%;
   right: 2%; }
 
-.contacts__map::before {
+.contacts__map-wrapper::before {
   position: absolute;
   content: "";
   background-image: url("/img/bg-triangle-white-footer.svg");
@@ -739,57 +761,54 @@
 
 .photo-editor__toggle {
   outline: none;
-  border: none;
-  background: none; }
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0; }
 
 .photo-editor__bar {
   width: 240px;
   height: 2px;
   background-color: #000000; }
 
-.photo-editor__toggle--crop {
+.photo-editor__bar--crop {
   position: relative; }
 
-.photo-editor__toggle--crop::after {
-  cursor: pointer;
+.photo-editor__toggle--crop {
   position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border: 2px solid #d22856;
   background-color: #F2F2F2;
   border-radius: 50%;
-  top: -23px;
+  top: -6px;
   left: 145px; }
 
-.photo-editor__toggle--fill {
+.photo-editor__bar--fill {
   position: relative; }
 
-.photo-editor__toggle--fill::after {
-  cursor: pointer;
+.photo-editor__toggle--fill {
   position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border: 2px solid #d22856;
   background-color: #F2F2F2;
   border-radius: 50%;
-  top: -23px;
+  top: -6px;
   left: 25px; }
 
-.photo-editor__toggle--contrast {
+.photo-editor__bar--contrast {
   position: relative; }
 
-.photo-editor__toggle--contrast::after {
-  cursor: pointer;
+.photo-editor__toggle--contrast {
   position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border: 2px solid #d22856;
   background-color: #F2F2F2;
   border-radius: 50%;
-  top: -23px;
+  top: -6px;
   left: 95px; }
 
 .photo-editor__toggle:active::after {
@@ -966,9 +985,7 @@
 
 .photos__item {
   padding-top: 20px;
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%; }
+  width: 90%; }
 
 .photos__panorama {
   width: 100%;
@@ -1006,12 +1023,18 @@
 
 .photos__content {
   background-color: #F2F2F2;
-  padding-top: 15px;
-  padding-left: 17px;
-  padding-right: 12px;
-  padding-bottom: 17px;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
   font-size: 14px;
   line-height: 28px; }
+
+.photos__content--main {
+  width: 100%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%; }
 
 .photos__description--main {
   padding-left: 5%;
@@ -1094,6 +1117,11 @@
   display: table-row;
   padding: 0;
   margin: 0; }
+
+.prices__row--filter,
+.prices__row--smile,
+.prices__row--comments {
+  background-color: #ffffff; }
 
 .prices__column {
   display: table-cell;
@@ -1616,6 +1644,13 @@ body {
     margin-top: 10px;
     background-image: url("/img/bg-map-tablet@1x.jpg");
     height: 390px; }
+  .contacts__map-pin{
+    top: 75%;
+    left: 50%; }
+  .contacts__map-wrapper{
+    margin-top: 10px;
+    background-image: url("/img/bg-map-tablet@1x.jpg");
+    height: 390px; }
   .copyright{
     padding-right: 55px;
     display: -ms-flexbox;
@@ -2001,7 +2036,7 @@ body {
     flex-direction: column;
     padding: 0;
     width: 46%;
-    padding-bottom: 3%; }
+    padding-bottom: 2%; }
   .photos__panorama::before{
     top: 60px;
     right: 10%; }
@@ -2017,6 +2052,10 @@ body {
     flex-grow: 1;
     padding-top: 20px;
     padding-left: 28px; }
+  .photos__content--main{
+    padding-bottom: 0;
+    margin-left: 2%;
+    margin-right: 2%; }
   .photos__description{
     -ms-flex-align: start;
     align-items: flex-start; }
@@ -2081,10 +2120,12 @@ body {
     font-size: 18px; }
   .prices__column--tick::after{
     transform: translateX(-50%);
-    left: 50%; }
+    left: 50%;
+    top: 30%; }
   .prices__column--cross::after{
     transform: translateX(-50%);
-    left: 50%; }
+    left: 50%;
+    top: 28%; }
   .prices__controls{
     display: none; }
   .promo__inner{
@@ -2116,10 +2157,10 @@ body {
     padding-right: 7%;
     background-image: url("/img/icon-timer.svg");
     background-repeat: no-repeat;
-    background-size: 232px 323px;
+    background-size: 232px 263px;
     width: 232px;
-    height: 323px;
-    top: -55px;
+    height: 263px;
+    top: -40px;
     left: 25px; }
   .research__image::before{
     content: "";
@@ -2129,7 +2170,7 @@ body {
     border: 22px solid #d22856;
     border-radius: 50%;
     left: 18px;
-    top: 81px; }
+    top: 55px; }
   .research__image::after{
     position: absolute;
     content: "24";
@@ -2139,7 +2180,7 @@ body {
     font-size: 93px;
     color: #d22856;
     left: 63px;
-    top: 153px;
+    top: 130px;
     z-index: 1000; }
   .research__content{
     width: 45%;
@@ -2226,6 +2267,8 @@ body {
 
 @media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx){
   .contacts__map{
+    background-image: url("/img/bg-map-tablet@2x.jpg"); }
+  .contacts__map-wrapper{
     background-image: url("/img/bg-map-tablet@2x.jpg"); }
   .intro{
     background-image: url("/img/bg-back-tablet@2x.jpg"); }
@@ -2334,6 +2377,13 @@ body {
     -ms-flex-order: 2;
     order: 2; }
   .contacts__map{
+    padding-bottom: 100px;
+    background-image: url("/img/bg-map-desktop@1x.jpg");
+    height: 400px; }
+  .contacts__map-pin{
+    top: 50%;
+    left: 50%; }
+  .contacts__map-wrapper{
     padding-bottom: 100px;
     background-image: url("/img/bg-map-desktop@1x.jpg");
     height: 400px; }
@@ -2569,8 +2619,7 @@ body {
     padding: 100px 160px;
     padding-bottom: 88px; }
   .photos__item{
-    width: 32%;
-    padding-bottom: 5%; }
+    width: 30%; }
   .photos__description--main{
     padding-bottom: 5%; }
   .prices__inner{
@@ -2605,18 +2654,19 @@ body {
     padding-top: 40px;
     padding-bottom: 0px; }
   .research__image{
+    top: -25px;
     width: 292px;
-    height: 373px;
-    background-size: 292px 373px; }
+    height: 343px;
+    background-size: 292px 343px; }
   .research__image::before{
     width: 200px;
     height: 200px;
     left: 23px;
-    top: 88px; }
+    top: 75px; }
   .research__image::after{
     font-size: 120px;
     left: 75px;
-    top: 188px; }
+    top: 170px; }
   .research__content{
     width: 56%;
     padding-top: 53px;
@@ -2668,6 +2718,8 @@ body {
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx){
   .contacts__map{
     background-image: url("/img/bg-map-desktop@2x.jpg"); }
+  .contacts__map-wrapper{
+    background-image: url("/img/bg-map-desktop@2x.jpg"); }
   .intro--index::after{
     background-image: url("/img/iphone-hand-desktop@2x.png"); }
   .page-header{
@@ -2680,6 +2732,9 @@ body {
     transform: translateX(-50%);
     left: 50%; }
   .contacts__map{
+    background-image: url("/img/bg-map-mobile@1x.png");
+    height: 210px; }
+  .contacts__map-wrapper{
     background-image: url("/img/bg-map-mobile@1x.png");
     height: 210px; }
   .intro--mobile{
@@ -2705,6 +2760,8 @@ body {
 
 @media (max-width: 659px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 659px) and (min-resolution: 144dpi), (max-width: 659px) and (min-resolution: 1.5dppx){
   .contacts__map{
+    background-image: url("/img/bg-map-mobile@2x.jpg"); }
+  .contacts__map-wrapper{
     background-image: url("/img/bg-map-mobile@2x.jpg"); }
   .intro--mobile{
     background-image: url("/img/bg-back-mobile@2x.jpg"); }
