@@ -1,8 +1,10 @@
 'use strict';
 
 var contactsMap = document.getElementById('map');
-contactsMap.classList.remove('contacts__map--hidden');
+var mapPin = document.querySelector('.contacts__map-pin');
 
+contactsMap.classList.remove('contacts__map--hidden');
+mapPin.classList.add('contacts__map-pin--hidden');
 
 function initMap() {
   var uluru = {lat: 59.938982, lng: 30.323158};

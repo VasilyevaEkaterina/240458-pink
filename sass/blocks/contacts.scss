@@ -148,6 +148,10 @@
   }
 }
 
+.contacts__map-pin--hidden {
+  display: none;
+}
+
 .contacts__map-wrapper {
   position: relative;
   background-repeat: no-repeat;
