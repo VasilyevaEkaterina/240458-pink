@@ -1279,7 +1279,8 @@
   display: inline-block;
   text-align: center;
   padding-top: 5px;
-  padding-bottom: 23px; }
+  padding-bottom: 23px;
+  width: 100%; }
 
 .review__slide {
   text-align: center;
@@ -2174,12 +2175,13 @@ body {
   .review__slide{
     display: -ms-flexbox;
     display: flex;
+    width: 90%;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0;
     padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px; }
+    padding-left: 5%;
+    padding-right: 5%; }
   .review__slide--hidden{
     display: none; }
   .review__details{
@@ -2634,8 +2636,6 @@ body {
   .review__slider{
     padding-top: 85px; }
   .review__slide{
-    padding-left: 140px;
-    padding-right: 140px;
     padding-top: 100px;
     position: relative; }
   .review__slide--hidden{
