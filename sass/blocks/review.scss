@@ -1,0 +1,206 @@
+.review__inner {
+  @include container;
+}
+.review__slider {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 23px;
+  width: 100%;
+  @media (min-width: $tablet-widths) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 85px;
+  }
+}
+.review__slide {
+  text-align: center;
+  padding: 36px 20px;
+  padding-bottom: 30px;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 100px;
+    position: relative;
+  }
+}
+
+.review__slide--active {
+  display: block;
+}
+
+.review__slide--hidden {
+  display: none;
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
+}
+
+.review__arrow-btns {
+  display: none;
+  @media (min-width: $desktop-widths) {
+    display: block;
+  }
+}
+
+.review__arrow {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 22px 42px;
+  width: 22px;
+  height: 42px;
+  opacity: 0.5;
+  top: 50%;
+}
+
+.review__arrow--prev {
+  background-image: url("/img/icon-review-arrow-right.svg");
+  left: 0;
+}
+
+.review__arrow--next {
+  right: 0;
+  background-image: url("/img/icon-review-arrow-right.svg");
+}
+
+.review__arrow:hover {
+  opacity: 1;
+}
+.review__arrow:active {
+  opacity: 0.3;
+}
+
+.review__details {
+  display: none;
+  @include text
+  padding: 0;
+  margin: 0;
+  @media (min-width: $tablet-widths) {
+    display: block;
+    width: 100%;
+    order: 3;
+    padding-bottom: 35px;
+  }
+  @media (min-width: $desktop-widths) {
+    font-size: 17px;
+  }
+}
+.review__text {
+  @include text;
+  line-height: 30px;
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  @media (min-width: $tablet-widths) {
+    order: 1;
+    font-size: 18px;
+  }
+}
+.review__name {
+  @include title;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 14px;
+  @media (min-width: $tablet-widths) {
+    display: block;
+    width: 100%;
+    order: 2;
+    padding: 0;
+    padding-top: 33px;
+    font-size: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    font-size: 23px;
+  }
+}
+.review__text::before {
+  content: "\00AB";
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-quotes.svg");
+    background-size: 79px 64px;
+    background-repeat: no-repeat;
+    width: 79px;
+    height: 64px;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.review__text::after {
+  content: "\00BB";
+  @media (min-width: $desktop-widths) {
+    content: "";
+  }
+}
+.review__slider-controls {
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
+}
+.review input[type=radio] {
+  display: none;
+}
+.review__label {
+  cursor: pointer;
+}
+.review__slider-btn {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.review__input + .review__label {
+  position: relative;
+  padding-right: 20px;
+}
+.review__input + .review__label::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: $light-grey;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+.review__input:hover + .review__label::before {
+  background-color: rgba(0,0,0,0.3);
+}
+.review__input:active + .review__label::before {
+  background-color: rgba($bg-grey,0.3);
+}
+.review__input:checked + .review__label::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: none;
+  border: 3px solid $bg;
+  border-radius: 50%;
+  left: 4px;
+  top: -3px;
+  z-index: 1000;
+}

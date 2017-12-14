@@ -1,0 +1,250 @@
+.prices {
+  background-color: $bg-grey;
+  position: relative;
+}
+.prices::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-triangle-white.svg");
+  background-size: 102% auto;
+  background-repeat: no-repeat;
+  width: 102%;
+  height: 100%;
+  bottom: 0;
+  left: -2%;
+  right: 2%;
+}
+
+.prices__inner {
+  @include container;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  overflow: hidden;
+  @media (min-width: $tablet-widths) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 95px;
+    padding-bottom: 90px;
+  }
+}
+.prices__table {
+  display: table;
+  padding-top: 60px;
+  @media (max-width: $mobile-widths) {
+    width: 341%;
+    transform: translateX(-47%);
+  }
+  @media (min-width: $tablet-widths) {
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+.prices__row {
+  display: table-row;
+  padding: 0;
+  margin: 0;
+}
+
+.prices__row--filter,
+.prices__row--smile,
+.prices__row--comments {
+  background-color: #ffffff;
+}
+
+.prices__column {
+  display: table-cell;
+  border: 1px solid $light-grey;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+  padding: 15px 25px;
+  @media (min-width: $tablet-widths) {
+    padding: 8px 0;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 17px;
+  }
+}
+.prices__column--header {
+  border-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  @media (min-width: $tablet-widths) {
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+.prices__header {
+  @include title;
+  font-size: 18px;
+  line-height: 30px;
+  display: table-header-group;
+  background-color: $bg;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  @media (min-width: $tablet-widths) {
+    font-size: 16px;
+  }
+}
+.prices__column--blank {
+  background-color: $bg-grey;
+  border: 0;
+}
+.prices__column--title {
+  text-align: left;
+  @media (min-width: $tablet-widths) {
+    display: block;
+    padding-left: 10px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-right: 0px;
+    font-size: 18px;
+  }
+}
+.prices__column--mobile {
+  text-align: left;
+  text-transform: uppercase;
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+.prices__price {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  @media (min-width: $tablet-widths) {
+    font-size: 18px;
+  }
+}
+.prices__content {
+  display: table-row-group;
+  background-color: #ffffff;
+}
+.prices__column--tick {
+  position: relative;
+}
+.prices__column--tick::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-yes.svg");
+  background-size: 27px 27px;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+  @media (max-width: $mobile-widths) {
+    top: 18px;
+    right: 16px;
+  }
+  @media (min-width: $tablet-widths) {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 30%;
+  }
+}
+.prices__column--cross {
+  position: relative;
+}
+.prices__column--cross::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-no.svg");
+  background-size: 27px 27px;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+  @media (max-width: $mobile-widths) {
+    top: 18px;
+    right: 16px;
+  }
+  @media (min-width: $tablet-widths) {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 28%;
+  }
+}
+.prices__column--popular {
+  position: relative;
+}
+.prices__column--popular::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-hit.svg");
+  background-size: 61px 62px;
+  width: 61px;
+  height: 62px;
+  top: -1px;
+  left: -2px;
+}
+.prices__column--popular::before {
+  position: absolute;
+  content: "Хит";
+  transform: rotate(-45deg);
+  z-index: 100;
+  top: 5px;
+  left: 5px;
+}
+.prices__controls {
+  display: block;
+  text-align: center;
+  padding-top: 41px;
+  padding-bottom: 10px;
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+.prices input[type=radio] {
+  display: none;
+}
+.prices__label {
+  cursor: pointer;
+}
+.prices__btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+.prices__input + .prices__label {
+  position: relative;
+  padding-right: 20px;
+}
+.prices__input + .prices__label::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: $light-grey;
+  border-radius: 50%;
+  top: 0;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.prices__input:hover + .prices__label::before {
+  background-color: rgba(0,0,0,0.3);
+}
+.prices__input:active + .prices__label::before {
+  background-color: rgba($bg-grey,0.3);
+}
+.prices__input:checked + .prices__label::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: none;
+  border: 3px solid $bg;
+  border-radius: 50%;
+  left: 3px;
+  top: -3px;
+  z-index: 1000;
+}

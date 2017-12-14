@@ -1,0 +1,269 @@
+.intro {
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/bg-back-tablet@1x.jpg");
+    display: flex;
+    align-items: flex-start;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-back-tablet@2x.jpg");
+    }
+  }
+  @media (min-width: $desktop-widths) {
+    background-image: none;
+    justify-content: space-between;
+  }
+}
+.intro--mobile {
+  @media (max-width: $mobile-widths) {
+    background-image: url("/img/bg-back-mobile@1x.jpg");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-back-mobile@2x.jpg");
+    }
+  }
+}
+.intro--index {
+  @media (min-width: $tablet-widths) {
+    position: relative;
+  }
+}
+.intro--index::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/iphone-hand-tablet@1x.png");
+    background-size: 700px 545px;
+    width: 700px;
+    height: 545px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/iphone-hand-tablet@2x.png");
+    }
+  }
+  @media (min-width: $desktop-widths) {
+    bottom: 0;
+    left: 0;
+    left: 59%;
+    z-index: 1000;
+    background-image: url("/img/iphone-hand-desktop@1x.png");
+    width: 1050px;
+    height: 645px;
+    background-size: 1050px 645px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/iphone-hand-desktop@2x.png");
+    }
+  }
+}
+.intro__photo {
+  padding-top: 126px;
+  padding-bottom: 270px;
+  margin-top: 1px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: $mobile-widths) {
+    background-image: url("/img/bg-back-mobile@1x.jpg");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/bg-back-mobile@2x.jpg");
+    }
+  }
+  @media (min-width: $tablet-widths) {
+    padding-top: 345px;
+    background-image: none;
+    width: 50%;
+  }
+  @media (min-width: $desktop-widths) {
+    margin-top: 0;
+    padding-top: 500px;
+    display: flex;
+  }
+}
+.intro__photo::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  @media (max-width: $mobile-widths) {
+    background-image: url("/img/iphone-hand-mobile@1x.png");
+    width: 258px;
+    height: 286px;
+    background-size: 258px 286px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/iphone-hand-mobile@2x.png");
+    }
+  }
+  @media (min-width: $desktop-widths) {
+    background-image: none;
+  }
+}
+.intro__title {
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 79px;
+  margin: 0;
+  text-align: center;
+  @include title;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  @media (min-width: $tablet-widths) {
+    font-size: 50px;
+    line-height: 60px;
+    padding-left: 150px;
+    padding-top: 70px;
+    padding-bottom: 140px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.intro__title--index {
+  padding-bottom: 80px;
+  display: none;
+  @media (min-width: $tablet-widths) {
+    font-size: 39px;
+    line-height: 50px;
+    display: block;
+    color: #ffffff;
+    padding: 0;
+    padding-left: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    font-size: 48px;
+    line-height: 59px;
+    padding-left: 17px;
+  }
+}
+
+.intro__title--photo {
+  @media (min-width: $desktop-widths) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.intro__title--form {
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  @media (min-width: $tablet-widths) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 80px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+.intro__wrap {
+  display: block;
+}
+.intro__download-wrapper {
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-direction: column-reverse;
+    order: -1;
+    z-index: 2000;
+    padding-top: 90px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 130px;
+  }
+}
+.intro__download {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: $tablet-widths) {
+    padding: 0;
+    order: -1;
+  }
+}
+.intro__stores {
+  display: inline-block;
+  text-align: center;
+  padding-top: 35px;
+  padding-left: 40px;
+  @media (min-width: $tablet-widths) {
+    padding-top: 45px;
+    padding-left: 64px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 60px;
+  }
+}
+.intro__store {
+  padding-right: 30px;
+  @media (min-width: $tablet-widths) {
+    padding-right: 38px;
+  }
+}
+.intro__store:last-child {
+  padding-right: 0;
+}
+.intro__store--android {
+  @media (min-width: $tablet-widths) {
+    opacity: 0.5;
+  }
+  @media (min-width: $desktop-widths) {
+    opacity: 1;
+  }
+}
+.intro__btn {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  background-color: none;
+  margin-top: 30px;
+  @media (min-width: $tablet-widths) {
+    width: 255px;
+    margin-left: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    font-size: 20px;
+    margin-top: 58px;
+  }
+}
+.intro__btn:hover {
+  color: $pink;
+  background-color: #ffffff;
+}
+.intro__btn:active {
+  color: rgba($pink,0.3);
+  background-color: #ffffff;
+}
+.intro__text {
+  @include text;
+  line-height: 23px;
+  text-align: center;
+  padding-bottom: 16px;
+  font-weight: 300;
+  @media (min-width: $tablet-widths) {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-top: 55px;
+  }
+}

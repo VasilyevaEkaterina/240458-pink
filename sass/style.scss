@@ -1,0 +1,31 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "fonts.scss";
+
+@import "blocks/advantages.scss";
+@import "blocks/contacts.scss";
+@import "blocks/copyright.scss";
+@import "blocks/form.scss";
+@import "blocks/intro.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/photo-editor.scss";
+@import "blocks/photos.scss";
+@import "blocks/prices.scss";
+@import "blocks/promo.scss";
+@import "blocks/research.scss";
+@import "blocks/review.scss";
+@import "blocks/social-btns.scss";
+@import "blocks/popup.scss";
+
+body {
+  @include text;
+  color: $text;
+  font-family: "Open Sans", "Arial", sans-serif;
+  padding: 0;
+  background-color: white;
+  margin: 0 auto;
+}

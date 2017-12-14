@@ -1,0 +1,237 @@
+.photos__inner {
+  @include container;
+}
+.photos__title-inner {
+  @include container;
+}
+.photos__title {
+  @include text;
+  line-height: 30px;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 28px;
+  margin: 0;
+  @media (min-width: $tablet-widths) {
+    padding: 45px 100px;
+    padding-top: 55px;
+    display: block;
+    font-size: 18px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 10px 240px;
+    padding-bottom: 60px;
+  }
+}
+.photos__title--head {
+  padding: 30px 35px;
+  padding-top: 40px;
+  padding-bottom: 53px;
+  @media (min-width: $tablet-widths) {
+    padding: 75px 100px;
+    padding-top: 90px;
+    font-size: 18px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding: 100px 160px;
+    padding-bottom: 88px;
+  }
+}
+.photos__mobile-wrap {
+  display: block;
+}
+.photos__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.photos__item {
+  padding-top: 20px;
+  width: 90%;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 46%;
+    padding-bottom: 2%;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 30%;
+  }
+}
+
+.photos__panorama {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  @media (min-width: $tablet-widths) {
+
+  }
+}
+.photos__panorama::before {
+  position: absolute;
+  content: "Панорама дня";
+  text-transform: uppercase;
+  background-color: $pink;
+  font-size: 13px;
+  color: #ffffff;
+  top: 1%;
+  padding: 3px 18px;
+  right: 17%;
+  z-index: 4000;
+  @media (min-width: $tablet-widths) {
+    top: 60px;
+    right: 10%;
+  }
+}
+.photos__link {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: $bg-grey;
+}
+.photos__photo {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.photos__photo--main {
+  padding: 0;
+  margin: 0;
+  height: 137px;
+  @media (min-width: $tablet-widths) {
+    height: 510px;
+  }
+}
+.photos__content {
+  background-color: $bg-grey;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  @include text;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    font-weight: 300;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-left: 28px;
+  }
+}
+
+.photos__content--main {
+  width: 100%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+.photos__description {
+  @media (min-width: $tablet-widths) {
+    align-items: flex-start;
+  }
+}
+.photos__description--main {
+  padding-left: 5%;
+  padding-right: 5%;
+  @media (min-width: $tablet-widths) {
+    padding: 0;
+    position: relative;
+    padding-bottom: 8%;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 5%;
+  }
+}
+.photos__description--main::after {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    content: "нравится: 215";
+    text-transform: uppercase;
+    color: $pink;
+    right: 50px;
+    top: 0;
+    font-size: 12px;
+    line-height: 28px;
+  }
+}
+.photos__description--main::before {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-heart.svg");
+    background-size: 12px 13px;
+    width: 12px;
+    height: 13px;
+    top: 7px;
+    right: 18px;
+    z-index: 10000;
+  }
+}
+.photos__name {
+  @include text;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+.photos__time {
+  @include text;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.photos__text {
+  padding: 0;
+  margin: 0;
+  @include text;
+  line-height: 24px;
+  padding-bottom: 8px;
+}
+.photos__likes {
+  @include text;
+  font-size: 12px;
+  color: $pink;
+  position: relative;
+  text-transform: uppercase;
+  padding-left: 30px;
+  @media (min-width: $tablet-widths) {
+    padding-left: 0;
+    margin-top: auto;
+    display: block;
+  }
+}
+.photos__likes::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/icon-heart.svg");
+  background-size: 12px 13px;
+  width: 12px;
+  height: 13px;
+  top: 7px;
+  left: 0;
+  z-index: 10000;
+  @media (min-width: $tablet-widths) {
+    top: 7px;
+    left: 87%;
+  }
+}
+.photos__likes--main {
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+
+.photos__likes--last {
+  @media (min-width: $tablet-widths) {
+    margin-top: 20px;
+  }
+}

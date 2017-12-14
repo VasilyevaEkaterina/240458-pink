@@ -1,0 +1,39 @@
+.copyright {
+  text-decoration: none;
+  color: $bg;
+  position: relative;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  padding-right: 42px;
+  @media (min-width: $tablet-widths) {
+    padding-right: 55px;
+    display: flex;
+    align-self: flex-end;
+    align-self: center;
+  }
+}
+.copyright::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/htmlacademy.svg");
+  background-size: 35px 37px;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 37px;
+  top: -2px;
+  right: 92px;
+  @media (min-width: $tablet-widths) {
+    right: 15px;
+    background-size: 39px 41px;
+    width: 39px;
+    height: 41px;
+  }
+}
+.copyright:hover::after {
+  background-image: url("/img/htmlacademy-black.svg");
+}
+.copyright:active::after {
+  background-image: url("/img/htmlacademy-black.svg");
+  opacity: 0.3;
+}

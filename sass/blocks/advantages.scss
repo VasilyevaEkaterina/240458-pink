@@ -1,0 +1,208 @@
+.advantages {
+  background-color: $bg-grey;
+  position: relative;
+  overflow: hidden;
+}
+.advantages::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/bg-triangle-white.svg");
+  background-size: 102% auto;
+  background-repeat: no-repeat;
+  width: 102%;
+  height: 100%;
+  bottom: 0;
+  left: -2%;
+  right: 2%;
+}
+.advantages__inner {
+  @include container;
+  padding-top: 65px;
+  padding-bottom: 305px;
+  @media (min-width: $tablet-widths) {
+    padding-top: 75px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: $desktop-widths) {
+    display: flex;
+    padding-top: 0px;
+  }
+}
+.advantages__item {
+  padding: 11px 19px;
+  text-align: center;
+  @media (min-width: $tablet-widths) {
+    padding: 0;
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+    padding-bottom: 27px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 33.333333%;
+    text-align: center;
+  }
+}
+.advantages__item:last-child {
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 0;
+  }
+}
+.advantages__title {
+  @include title;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 6px;
+  @media (min-width: $desktop-widths) {
+    font-size: 28px;
+    padding-bottom: 23px;
+  }
+}
+.advantages__text {
+  @include text;
+  line-height: 25px;
+  padding: 0;
+  margin: 0;
+  @media (min-width: $desktop-widths) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.advantages__mobile-wrap {
+  display: block;
+  @media (min-width: $tablet-widths) {
+    display: inline;
+  }
+}
+.advantages__tablet-wrap {
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+}
+.advantages__description {
+  @media (min-width: $tablet-widths) {
+    width: 50%;
+    padding-right: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    padding: 0;
+    padding-top: 355px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+.advantages__photo {
+  @media (min-width: $tablet-widths) {
+    width: 50%;
+    padding-left: 20px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    padding: 0;
+  }
+}
+.advantages__photo--left {
+  position: relative;
+}
+.advantages__photo--left::after {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 185px;
+    height: 305px;
+    background-size: 185px 305px;
+    background-repeat: no-repeat;
+    background-image: url("/img/iphone-screen-1-tablet@1x.png");
+    top: 0;
+    left: 80px;
+  }
+}
+.advantages__photo--left::before {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 225px;
+    height: 8px;
+    background-color: $bg-grey;
+    top: 305px;
+    left: 55px;
+    z-index: 4000;
+    box-shadow: 0 -4px 5px -3px rgba(0,0,0,0.5);
+  }
+}
+.advantages__photo--center {
+  position: relative;
+}
+.advantages__photo--center::after {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 185px;
+    height: 305px;
+    background-size: 185px 305px;
+    background-repeat: no-repeat;
+    background-image: url("/img/iphone-screen-2-tablet@1x.png");
+    top: 0;
+    left: 82px;
+  }
+}
+.advantages__photo--center::before {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 225px;
+    height: 8px;
+    background-color: $bg-grey;
+    top: 305px;
+    left: 55px;
+    z-index: 4000;
+    box-shadow: 0 -4px 5px -3px rgba(0,0,0,0.5)
+  }
+}
+.advantages__photo--right {
+  position: relative;
+}
+.advantages__photo--right::after {
+  position: absolute;
+  content: "";
+  width: 157px;
+  height: 320px;
+  background-size: 157px 320px;
+  background-repeat: no-repeat;
+  @media (max-width: $mobile-widths) {
+    background-image: url("/img/iphone-screen-mobile@1x.png");
+    top: 150px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  @media (min-width: $tablet-widths) {
+    background-image: url("/img/iphone-screen-3-tablet@1x.png");
+    width: 268px;
+    height: 481px;
+    background-size: 268px 481px;
+    bottom: -40px;
+    left:  20px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 185px;
+    height: 305px;
+    background-size: 185px 305px;
+    top: 0;
+    left: 83px;
+  }
+}
+.advantages__photo--right::before {
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    content: "";
+    width: 225px;
+    height: 8px;
+    background-color: $bg-grey;
+    top: 305px;
+    left: 55px;
+    z-index: 4000;
+    box-shadow: 0 -4px 5px -3px rgba(0,0,0,0.5)
+  }
+}
