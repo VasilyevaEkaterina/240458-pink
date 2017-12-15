@@ -3,7 +3,6 @@
 var contactsMap = document.getElementById('map');
 var mapPin = document.querySelector('.contacts__map-pin');
 
-contactsMap.classList.remove('contacts__map--hidden');
 mapPin.classList.add('contacts__map-pin--hidden');
 
 function initMap() {

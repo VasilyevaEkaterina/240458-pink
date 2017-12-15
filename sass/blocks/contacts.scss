@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #ffffff;
 }
+
 .contacts__inner {
   @include container;
   padding-top: 36px;
@@ -15,6 +16,7 @@
     margin-bottom: 50px;
   }
 }
+
 .contacts__title {
   @include title;
   font-size: 24px;
@@ -37,6 +39,7 @@
     line-height: 60px;
   }
 }
+
 .contacts__text {
   @include text;
   font-weight: 700;
@@ -47,6 +50,7 @@
     padding-bottom: 25px;
   }
 }
+
 .contacts__item {
   padding-top: 17px;
   @media (min-width: $tablet-widths) {
@@ -59,6 +63,7 @@
     padding-top: 50px;
   }
 }
+
 .contacts__item--address {
   padding-left: 20px;
   padding-right: 20px;
@@ -71,11 +76,13 @@
     width: 30%;
   }
 }
+
 .contacts__item--email {
   @media (min-width: $desktop-widths) {
     order: 2;
   }
 }
+
 .contacts__tel,
 .contacts__email,
 .contacts__address {
@@ -86,13 +93,16 @@
   text-decoration: none;
   color: $pink;
 }
+
 .contacts__email:hover {
   color: #000000;
   text-decoration: underline;
 }
+
 .contacts__email:active {
   color: $bg-grey;
 }
+
 .contacts__map {
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,9 +133,6 @@
     }
   }
 }
-.contacts__map--hidden {
-  visibility: hidden;
-}
 
 .contacts__map-pin {
   content: "";
@@ -154,34 +161,6 @@
 
 .contacts__map-wrapper {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 30px;
-  background-position: center;
-  width: 100%;
-  @media (max-width: $mobile-widths) {
-    background-image: url("/img/bg-map-mobile@1x.png");
-    height: 210px;
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("/img/bg-map-mobile@2x.jpg");
-    }
-  }
-  @media (min-width: $tablet-widths) {
-    margin-top: 10px;
-    background-image: url("/img/bg-map-tablet@1x.jpg");
-    height: 390px;
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("/img/bg-map-tablet@2x.jpg");
-    }
-  }
-  @media (min-width: $desktop-widths) {
-    padding-bottom: 100px;
-    background-image: url("/img/bg-map-desktop@1x.jpg");
-    height: 400px;
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("/img/bg-map-desktop@2x.jpg");
-    }
-  }
 }
 
 .contacts__map-wrapper::after {
@@ -196,6 +175,7 @@
   left: -2%;
   right: 2%;
 }
+
 .contacts__map-wrapper::before {
   position: absolute;
   content: "";

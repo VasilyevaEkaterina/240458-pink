@@ -10,10 +10,12 @@
     max-width: 960px;
   }
 }
+
 @mixin text {
   font-size: 14px;
   line-height: 28px;
 }
+
 @mixin title {
   font-size: 30px;
   line-height: 35px;
