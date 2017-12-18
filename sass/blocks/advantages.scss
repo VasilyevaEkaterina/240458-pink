@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .advantages::before {
   position: absolute;
   content: "";
@@ -15,6 +16,7 @@
   left: -2%;
   right: 2%;
 }
+
 .advantages__inner {
   @include container;
   padding-top: 65px;
@@ -28,6 +30,7 @@
     padding-top: 0px;
   }
 }
+
 .advantages__item {
   padding: 11px 19px;
   text-align: center;
@@ -43,11 +46,13 @@
     text-align: center;
   }
 }
+
 .advantages__item:last-child {
   @media (min-width: $tablet-widths) {
     padding-bottom: 0;
   }
 }
+
 .advantages__title {
   @include title;
   font-size: 18px;
@@ -59,6 +64,7 @@
     padding-bottom: 23px;
   }
 }
+
 .advantages__text {
   @include text;
   line-height: 25px;
@@ -69,17 +75,20 @@
     line-height: 28px;
   }
 }
+
 .advantages__mobile-wrap {
   display: block;
   @media (min-width: $tablet-widths) {
     display: inline;
   }
 }
+
 .advantages__tablet-wrap {
   @media (min-width: $tablet-widths) {
     display: block;
   }
 }
+
 .advantages__description {
   @media (min-width: $tablet-widths) {
     width: 50%;
@@ -93,6 +102,7 @@
     padding-right: 35px;
   }
 }
+
 .advantages__photo {
   @media (min-width: $tablet-widths) {
     width: 50%;
@@ -103,9 +113,11 @@
     padding: 0;
   }
 }
+
 .advantages__photo--left {
   position: relative;
 }
+
 .advantages__photo--left::after {
   @media (min-width: $desktop-widths) {
     position: absolute;
@@ -119,6 +131,7 @@
     left: 80px;
   }
 }
+
 .advantages__photo--left::before {
   @media (min-width: $desktop-widths) {
     position: absolute;
@@ -132,9 +145,11 @@
     box-shadow: 0 -4px 5px -3px rgba(0,0,0,0.5);
   }
 }
+
 .advantages__photo--center {
   position: relative;
 }
+
 .advantages__photo--center::after {
   @media (min-width: $desktop-widths) {
     position: absolute;
@@ -148,6 +163,7 @@
     left: 82px;
   }
 }
+
 .advantages__photo--center::before {
   @media (min-width: $desktop-widths) {
     position: absolute;
@@ -161,9 +177,11 @@
     box-shadow: 0 -4px 5px -3px rgba(0,0,0,0.5)
   }
 }
+
 .advantages__photo--right {
   position: relative;
 }
+
 .advantages__photo--right::after {
   position: absolute;
   content: "";
@@ -193,6 +211,7 @@
     left: 83px;
   }
 }
+
 .advantages__photo--right::before {
   @media (min-width: $desktop-widths) {
     position: absolute;

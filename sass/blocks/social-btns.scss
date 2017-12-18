@@ -11,6 +11,7 @@
     padding-top: 2px;
   }
 }
+
 .social-btns__btn {
   font-size: 0;
   width: 41px;
@@ -21,22 +22,24 @@
   border-radius: 50%;
   cursor: pointer;
   margin-right: 19px;
-  @media (min-width: $tablet-widths) {
-
-  }
 }
+
 .social-btns__btn:last-child {
   margin-right: 0;
 }
+
 .social-btns__btn:hover {
   border: 2px solid #000000;
 }
+
 .social-btns__btn:active {
   opacity: 0.3;
 }
+
 .social-btns__btn--tw {
   position: relative;
 }
+
 .social-btns__btn--tw::after {
   position: absolute;
   content: "";
@@ -49,9 +52,11 @@
   transform: translateX(-50%);
   top: 30%;
 }
+
 .social-btns__btn--fb {
   position: relative;
 }
+
 .social-btns__btn--fb::after {
   position: absolute;
   content: "";
@@ -64,9 +69,11 @@
   transform: translateX(-50%);
   top: 25%;
 }
+
 .social-btns__btn--youtube {
   position: relative;
 }
+
 .social-btns__btn--youtube::after {
   position: absolute;
   content: "";

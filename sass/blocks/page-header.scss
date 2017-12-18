@@ -10,6 +10,7 @@
     }
   }
 }
+
 .page-header__inner {
   @include container;
   position: relative;
@@ -70,6 +71,7 @@
 .page-header__toggle--opened {
   background-image: url("/img/icon-menu-cross.svg");
 }
+
 .page-header__toggle--closed {
   background-image: url("/img/icon-menu-burger.svg");
 }

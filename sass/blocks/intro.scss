@@ -17,6 +17,7 @@
     justify-content: space-between;
   }
 }
+
 .intro--mobile {
   @media (max-width: $mobile-widths) {
     background-image: url("/img/bg-back-mobile@1x.jpg");
@@ -25,11 +26,13 @@
     }
   }
 }
+
 .intro--index {
   @media (min-width: $tablet-widths) {
     position: relative;
   }
 }
+
 .intro--index::after {
   content: "";
   position: absolute;
@@ -60,6 +63,7 @@
     }
   }
 }
+
 .intro__photo {
   padding-top: 126px;
   padding-bottom: 270px;
@@ -85,6 +89,7 @@
     display: flex;
   }
 }
+
 .intro__photo::after {
   content: "";
   position: absolute;
@@ -105,6 +110,7 @@
     background-image: none;
   }
 }
+
 .intro__title {
   padding: 0;
   padding-top: 35px;
@@ -128,6 +134,7 @@
     padding-right: 0;
   }
 }
+
 .intro__title--index {
   padding-bottom: 80px;
   display: none;
@@ -168,9 +175,11 @@
     padding-bottom: 90px;
   }
 }
+
 .intro__wrap {
   display: block;
 }
+
 .intro__download-wrapper {
   @media (min-width: $tablet-widths) {
     display: flex;
@@ -183,6 +192,7 @@
     padding-top: 130px;
   }
 }
+
 .intro__download {
   padding-left: 20px;
   padding-right: 20px;
@@ -191,6 +201,7 @@
     order: -1;
   }
 }
+
 .intro__stores {
   display: inline-block;
   text-align: center;
@@ -204,15 +215,18 @@
     padding-top: 60px;
   }
 }
+
 .intro__store {
   padding-right: 30px;
   @media (min-width: $tablet-widths) {
     padding-right: 38px;
   }
 }
+
 .intro__store:last-child {
   padding-right: 0;
 }
+
 .intro__store--android {
   @media (min-width: $tablet-widths) {
     opacity: 0.5;
@@ -221,6 +235,7 @@
     opacity: 1;
   }
 }
+
 .intro__btn {
   text-decoration: none;
   color: #ffffff;
@@ -242,14 +257,17 @@
     margin-top: 58px;
   }
 }
+
 .intro__btn:hover {
   color: $pink;
   background-color: #ffffff;
 }
+
 .intro__btn:active {
   color: rgba($pink,0.3);
   background-color: #ffffff;
 }
+
 .intro__text {
   @include text;
   line-height: 23px;

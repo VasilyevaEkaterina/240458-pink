@@ -32,6 +32,7 @@
     padding-left: 305px;
   }
 }
+
 .main-nav__item {
   list-style: none;
   padding: 0;
@@ -42,11 +43,13 @@
     margin-left: 30px;
   }
 }
+
 .main-nav__item--active{
   @media (min-width: $desktop-widths) {
     border-bottom: 1px solid $bg-grey;
   }
 }
+
 .main-nav__item:first-child {
   box-shadow: 0 -1px 1px 0 rgba(0,0,0,0.5),
               0 1px 1px 0 rgba(0,0,0,0.5);
@@ -54,6 +57,7 @@
     box-shadow: 0 0 0 0 #ffffff;
   }
 }
+
 .main-nav__link {
   display: block;
   vertical-align: middle;
@@ -75,9 +79,11 @@
     text-transform: none;
   }
 }
+
 .main-nav__link:hover {
   color: $pink;
 }
+
 .main-nav__link:active {
   color: $pink;
   opacity: 0.3;

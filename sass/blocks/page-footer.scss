@@ -17,6 +17,7 @@
     display: none;
   }
 }
+
 .page-footer__logo {
   display: block;
   position: relative;
@@ -32,6 +33,7 @@
     padding-left: 20px;
   }
 }
+
 .page-footer__logo::after {
   position: absolute;
   content: "";
@@ -49,6 +51,7 @@
     background-image: url("/img/logo-pink-blue-desktop.svg");
   }
 }
+
 .page-footer__logo:active::after {
   opacity: 0.3;
 }

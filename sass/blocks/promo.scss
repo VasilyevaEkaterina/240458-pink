@@ -1,9 +1,11 @@
 .promo {
   background-color: #ffffff;
 }
+
 .promo__inner {
   @include container;
 }
+
 .promo__title {
   @include title;
   font-weight: 300;
@@ -26,6 +28,7 @@
     padding-right: 100px;
   }
 }
+
 .promo__title--index {
   @media (min-width: $desktop-widths) {
     padding-bottom: 75px;
@@ -40,6 +43,7 @@
     display: inline;
   }
 }
+
 .promo__tablet-wrap {
   @media (min-width: $tablet-widths) {
     display: block;

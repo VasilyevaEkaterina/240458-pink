@@ -13,6 +13,7 @@
     align-self: center;
   }
 }
+
 .copyright::after {
   position: absolute;
   content: "";
@@ -30,9 +31,11 @@
     height: 41px;
   }
 }
+
 .copyright:hover::after {
   background-image: url("/img/htmlacademy-black.svg");
 }
+
 .copyright:active::after {
   background-image: url("/img/htmlacademy-black.svg");
   opacity: 0.3;

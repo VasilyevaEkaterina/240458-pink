@@ -1,6 +1,7 @@
 .review__inner {
   @include container;
 }
+
 .review__slider {
   position: relative;
   display: inline-block;
@@ -8,6 +9,7 @@
   padding-top: 5px;
   padding-bottom: 23px;
   width: 100%;
+  overflow: hidden;
   @media (min-width: $tablet-widths) {
     padding-top: 0;
     padding-bottom: 0;
@@ -16,6 +18,7 @@
     padding-top: 85px;
   }
 }
+
 .review__slide {
   text-align: center;
   padding: 36px 20px;
@@ -37,6 +40,9 @@
 
 .review__slide--active {
   display: block;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+  }
 }
 
 .review__slide--hidden {
@@ -53,6 +59,7 @@
   display: none;
   @media (min-width: $desktop-widths) {
     display: block;
+    opacity: 0;
   }
 }
 
@@ -84,6 +91,7 @@
 .review__arrow:hover {
   opacity: 1;
 }
+
 .review__arrow:active {
   opacity: 0.3;
 }
@@ -103,6 +111,7 @@
     font-size: 17px;
   }
 }
+
 .review__text {
   @include text;
   line-height: 30px;
@@ -115,6 +124,7 @@
     font-size: 18px;
   }
 }
+
 .review__name {
   @include title;
   font-size: 18px;
@@ -133,6 +143,7 @@
     font-size: 23px;
   }
 }
+
 .review__text::before {
   content: "\00AB";
   @media (min-width: $desktop-widths) {
@@ -148,32 +159,42 @@
     transform: translateX(-50%);
   }
 }
+
 .review__text::after {
   content: "\00BB";
   @media (min-width: $desktop-widths) {
     content: "";
   }
 }
+
 .review__slider-controls {
+  opacity: 0;
   @media (min-width: $desktop-widths) {
     display: none;
   }
 }
+
 .review input[type=radio] {
   display: none;
+  border: none;
+  outline: none;
 }
+
 .review__label {
   cursor: pointer;
 }
+
 .review__slider-btn {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
 }
+
 .review__input + .review__label {
   position: relative;
   padding-right: 20px;
 }
+
 .review__input + .review__label::before {
   position: absolute;
   content: "";
@@ -186,15 +207,22 @@
   z-index: 100;
   transform: translateX(-50%);
 }
+
 .review__input:hover + .review__label::before {
   background-color: rgba(0,0,0,0.3);
 }
-.review__input:active + .review__label::before {
+
+.review__input:focus + .review__label::before {
   background-color: rgba($bg-grey,0.3);
+  border: none;
+  outline: none;
 }
+
 .review__input:checked + .review__label::after {
   position: absolute;
   content: "";
+  border: none;
+  outline: none;
   width: 6px;
   height: 6px;
   background-color: none;
