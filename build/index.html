@@ -116,17 +116,17 @@
         <div class="review__inner">
           <div class="review__slider">
             <div class="review__slide-list">
-              <div class="review__slide review__slide--prev review__slide--hidden">
+              <div class="review__slide review__slide--prev">
                 <span class="review__details">25 лет, водитель трамвая</span>
                 <h3 class="review__name">Андрей Иванов</h3>
                 <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
               </div>
-              <div class="review__slide review__slide--active">
+              <div class="review__slide review__slide--current">
                 <span class="review__details">35 лет, водитель трамвая</span>
                 <h3 class="review__name">Николай Петров</h3>
                 <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
               </div>
-              <div class="review__slide review__slide--next review__slide--hidden">
+              <div class="review__slide review__slide--next">
                 <span class="review__details">45 лет, водитель трамвая</span>
                 <h3 class="review__name">Сергей Свиридов</h3>
                 <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
@@ -138,16 +138,16 @@
             </div>
             <form class="review__slider-controls">
               <div class="review__slider-btn review__slider-btn--prev">
-                <input type="radio" class="review__input review__input--prev" id="review__btn-1" name="slider-btn">
-                <label for="review__btn-1" class="review__label"></label>
+                <input type="radio" class="review__input review__input--prev" id="btn-1" name="slider-btn" onchange="slidePrev()">
+                <label for="btn-1" class="review__label"></label>
               </div>
               <div class="review__slider-btn review__slider-btn--active">
-                <input type="radio" class="review__input review__input--active" id="review__btn-2" name="slider-btn" checked>
-                <label for="review__btn-2" class="review__label"></label>
+                <input type="radio" class="review__input review__input--active" id="btn-2" name="slider-btn" checked onchange="slideActive()">
+                <label for="btn-2" class="review__label"></label>
               </div>
               <div class="review__slider-btn review__slider-btn--next">
-                <input type="radio" class="review__input review__input--next" id="review__btn-3" name="slider-btn">
-                <label for="review__btn-3" class="review__label"></label>
+                <input type="radio" class="review__input review__input--next" id="btn-3" name="slider-btn" onchange="slideNext()">
+                <label for="btn-3" class="review__label"></label>
               </div>
             </form>
           </div>
@@ -155,7 +155,7 @@
       </div>
       <div class="prices">
         <div class="prices__inner">
-          <div class="prices__table">
+          <div class="prices__table" id="prices">
             <div class="prices__header">
               <ul class="prices__row prices__row--header">
                 <li class="prices__column prices__column--header prices__column--blank"></li>
@@ -214,16 +214,16 @@
           </div>
           <form class="prices__controls">
             <div class="prices__btn prices__btn--prev">
-              <input type="radio" class="prices__input" id="prices__btn-1" name="prices-btn">
-              <label for="prices__btn-1" class="prices__label"></label>
+              <input type="radio" class="prices__input prices__input--prev" id="prices-1" name="prices-btn" onclick="slideLeft()">
+              <label for="prices-1" class="prices__label prices__label--prev"></label>
             </div>
             <div class="prices__btn prices__btn--active">
-              <input type="radio" class="prices__input" id="prices__btn-2" name="prices-btn" checked>
-              <label for="prices__btn-2" class="prices__label"></label>
+              <input type="radio" class="prices__input" id="prices-2" name="prices-btn" checked onclick="slideCenter()">
+              <label for="prices-2" class="prices__label"></label>
             </div>
             <div class="prices__btn prices__btn--next">
-              <input type="radio" class="prices__input" id="prices__btn-3" name="prices-btn">
-              <label for="prices__btn-3" class="prices__label"></label>
+              <input type="radio" class="prices__input" id="prices-3" name="prices-btn" onclick="slideRight()">
+              <label for="prices-3" class="prices__label"></label>
             </div>
           </form>
         </div>
@@ -262,6 +262,7 @@
       </div>
     </footer>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/slider-controls.js"></script>
     <script src="js/map.js" defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDMUQ0YT8U-cKOHsMqQ55SFXQ3lcE0WB8&callback=initMap"></script>
   </body>

@@ -37,6 +37,7 @@
   @media (max-width: $mobile-widths) {
     width: 341%;
     transform: translateX(-47%);
+    transition: transform 1s ease-out 0.5s;
   }
   @media (min-width: $tablet-widths) {
     width: 620px;
@@ -218,13 +219,15 @@
   text-align: center;
   padding-top: 41px;
   padding-bottom: 10px;
+  position: relative;
   @media (min-width: $tablet-widths) {
     display: none;
   }
 }
 
 .prices input[type=radio] {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .prices__label {
@@ -244,8 +247,8 @@
 .prices__input + .prices__label::before {
   position: absolute;
   content: "";
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background-color: $light-grey;
   border-radius: 50%;
   top: 0;

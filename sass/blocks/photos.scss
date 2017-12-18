@@ -211,10 +211,11 @@
   text-transform: uppercase;
   padding-left: 30px;
   @media (min-width: $tablet-widths) {
+    display: block;
     padding-left: 0;
     margin-top: auto;
-    margin-left: 5%;
-    display: block;
+    margin-left: 7%;
+    margin-bottom: 10px;
   }
 }
 
@@ -232,6 +233,10 @@
     top: 7px;
     left: 87%;
   }
+}
+
+.photos__likes:hover::before {
+  fill: $pink;
 }
 
 .photos__likes--main {

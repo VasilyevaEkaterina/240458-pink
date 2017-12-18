@@ -9,6 +9,7 @@
   padding-top: 5px;
   padding-bottom: 23px;
   width: 100%;
+  overflow: hidden;
   @media (min-width: $tablet-widths) {
     padding-top: 0;
     padding-bottom: 0;
@@ -39,6 +40,9 @@
 
 .review__slide--active {
   display: block;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+  }
 }
 
 .review__slide--hidden {
@@ -55,6 +59,7 @@
   display: none;
   @media (min-width: $desktop-widths) {
     display: block;
+    opacity: 0;
   }
 }
 
@@ -163,6 +168,7 @@
 }
 
 .review__slider-controls {
+  opacity: 0;
   @media (min-width: $desktop-widths) {
     display: none;
   }
@@ -170,6 +176,8 @@
 
 .review input[type=radio] {
   display: none;
+  border: none;
+  outline: none;
 }
 
 .review__label {
@@ -204,13 +212,17 @@
   background-color: rgba(0,0,0,0.3);
 }
 
-.review__input:active + .review__label::before {
+.review__input:focus + .review__label::before {
   background-color: rgba($bg-grey,0.3);
+  border: none;
+  outline: none;
 }
 
 .review__input:checked + .review__label::after {
   position: absolute;
   content: "";
+  border: none;
+  outline: none;
   width: 6px;
   height: 6px;
   background-color: none;
